@@ -165,9 +165,9 @@ public class CrsfRsb implements Serializable {
     @Column(name = "RSBRECDTE")
     private String rsbrecdte;
 
-//    @JoinColumn(name = "RSBCLMNO", referencedColumnName = "CLMNO")
-//    @ManyToOne(optional = false, fetch = FetchType.EAGER)
-//    private CrsfPol crsfPol;
+    @JoinColumn(name = "RSBCLMNO", referencedColumnName = "CLMNO")
+    @ManyToOne(optional = false, fetch = FetchType.EAGER)
+    private CrsfPol crsfPol;
     public String toString() {
         return rsbclmno+"_"+rsbpolno+"_"+rsbplcd;
     }

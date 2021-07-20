@@ -146,23 +146,23 @@ public class CrsfPol implements Serializable {
     @OneToOne(optional = false)
     private CrsfClm crsfClm;
     
-    @JoinColumn(name = "RSBCLMNO", referencedColumnName = "CLMNO", insertable = false, updatable = false)
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<CrsfRsb> ridersRsbList;
+//    @JoinColumn(name = "RSBCLMNO", referencedColumnName = "CLMNO", insertable = false, updatable = false)
+//    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+//    private List<CrsfRsb> ridersRsbList;
 
     
-    @JoinColumn(name = "CLMNO", referencedColumnName = "CLMNO", insertable = false, updatable = false)
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<CrsFclmHi> claimHistory;    
+//    @JoinColumn(name = "CLMNO", referencedColumnName = "CLMNO", insertable = false, updatable = false)
+//    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+//    private List<CrsFclmHi> claimHistory;
     
     
     @JoinColumn(name = "HRSBCLMNO", referencedColumnName = "CLMNO", insertable = false, updatable = false)
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<CrsfRsbHi> claimRsbHistory;      
+    private List<CrsfRsbHi> claimRsbHistory;
     
-    @JoinColumn(name = "SETCLMNO", referencedColumnName = "CLMNO", insertable = false, updatable = false)
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<CrsfSet> setList;    
+//    @JoinColumn(name = "SETCLMNO", referencedColumnName = "CLMNO", insertable = false, updatable = false)
+//    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+//    private List<CrsfSet> setList;
     
     /**
      * @return the serialVersionUID
