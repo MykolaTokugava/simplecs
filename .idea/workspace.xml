@@ -1,36 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9194258a-5207-4f64-ac34-1b465a3a883c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/CrlBank.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/CrlBankContract.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/CrlBankProduct.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/CrlBpIp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/CrlGeneral1c.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/CrlGeneralBank.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/CrlInsurProduct.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/CrlPayment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/CrlPolicy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/CrlTariffPlan.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/CrlTpCoef.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crs/ClmAgt.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crs/ClmCrmNigo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crs/CrsFccc.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crs/CrsFcccPk.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crs/CrsFclmHi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crs/CrsFclmHiPk.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crs/CrsFpcd.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crs/CrsfDcl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crs/CrsfDclPk.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crs/CrsfPol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crs/CrsfPol.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crs/CrsfRsb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crs/CrsfRsb.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crs/CrsfRsbHi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crs/CrsfRsbHiPk.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crs/CrsfSet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crs/CrsfSrb.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crs/CrsfSrbHi.java" beforeDir="false" />
-    </list>
+    <list default="true" id="9194258a-5207-4f64-ac34-1b465a3a883c" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,11 +13,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CrsfPol.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CrsfPol.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crs/CrsfPol.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="281">
               <caret line="153" selection-start-line="153" selection-start-column="2" selection-end-line="155" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/controllers/MainController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="processing.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/utils/processing.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="506">
+              <caret line="165" selection-start-line="165" selection-end-line="165" />
             </state>
           </provider>
         </entry>
@@ -255,6 +244,13 @@
               <item name="simplecs" type="616d4139:PackageViewModuleNode" />
               <item name="ua.metlife.claims.simplecs" type="1f31426a:PackageElementNode" />
               <item name="entity" type="1f31426a:PackageElementNode" />
+              <item name="crl" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="simplecs" type="58d84e3e:PackageViewProjectNode" />
+              <item name="simplecs" type="616d4139:PackageViewModuleNode" />
+              <item name="ua.metlife.claims.simplecs" type="1f31426a:PackageElementNode" />
+              <item name="entity" type="1f31426a:PackageElementNode" />
               <item name="crs" type="1f31426a:PackageElementNode" />
             </path>
             <path>
@@ -269,6 +265,12 @@
               <item name="simplecs" type="616d4139:PackageViewModuleNode" />
               <item name="ua.metlife.claims.simplecs" type="1f31426a:PackageElementNode" />
               <item name="repo" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="simplecs" type="58d84e3e:PackageViewProjectNode" />
+              <item name="simplecs" type="616d4139:PackageViewModuleNode" />
+              <item name="ua.metlife.claims.simplecs" type="1f31426a:PackageElementNode" />
+              <item name="utils" type="1f31426a:PackageElementNode" />
             </path>
           </expand>
           <select />
@@ -398,12 +400,12 @@
       <workItem from="1626157480755" duration="1246000" />
       <workItem from="1626416236467" duration="2783000" />
       <workItem from="1626762873723" duration="599000" />
-      <workItem from="1626766603291" duration="3576000" />
+      <workItem from="1626766603291" duration="3838000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28616000" />
+    <option name="totallyTimeSpent" value="28878000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
@@ -598,20 +600,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/CrlGeneral1c.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/controllers/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/utils/processing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="165" selection-start-line="165" selection-end-line="165" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -759,6 +747,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="281">
           <caret line="153" selection-start-line="153" selection-start-column="2" selection-end-line="155" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/controllers/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/utils/processing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="165" selection-start-line="165" selection-end-line="165" />
         </state>
       </provider>
     </entry>
