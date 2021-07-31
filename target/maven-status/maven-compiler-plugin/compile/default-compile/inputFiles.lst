@@ -1,38 +1,40 @@
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsFccc.java
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\ClmCrmNigo.java
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\csr\CsSystem.java
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfRsbHi.java
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\utils\processing.java
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\App.java
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfDcl.java
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crl\CrlPayment.java
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crl\CrlGeneral1c.java
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crl\CrlBpIp.java
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crl\CrlTariffPlan.java
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsFpcd.java
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crl\CrlBankProduct.java
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfDclPk.java
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crl\CrlPolicy.java
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfRsb.java
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfSet.java
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfPol.java
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfClmPk.java
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crl\CrlBankContract.java
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crl\CrlGeneralBank.java
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfSrbHi.java
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfClm.java
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfRsbPk.java
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsFcccPk.java
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\csr\CsRegister.java
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\repo\CsSystemRepository.java
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\repo\CsSystemTransaction.java
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crl\CrlTpCoef.java
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\ClmAgt.java
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crl\CrlBank.java
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\controllers\MainController.java
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfPolPk.java
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsFclmHi.java
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfRsbHiPk.java
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsFclmHiPk.java
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crl\CrlInsurProduct.java
-E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfSrb.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crl\CrlInsurProduct.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\ClmAgt.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsFclmHiPk.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfPolPk.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfRsbHiPk.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\csr\CsAccidents.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsFclmHi.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crl\CrlTariffPlan.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfRsbHi.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crl\CrlGeneralBank.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\ClmCrmNigo.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfClm.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crl\CrlBankProduct.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\csr\CsSystem.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crl\CrlBpIp.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crl\CrlBankContract.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfClmPk.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfRsbPk.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\repo\CsSystemRepository.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfSet.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsFpcd.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\utils\processing.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsFcccPk.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\csr\CsIdLink.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crl\CrlBank.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfSrbHi.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\App.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\repo\CsSystemTransaction.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\controllers\MainController.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crl\CrlTpCoef.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfDclPk.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfPol.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfRsb.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfDcl.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crl\CrlPayment.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsFccc.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crl\CrlPolicy.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crl\CrlGeneral1c.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfSrb.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\csr\CsRegister.java
