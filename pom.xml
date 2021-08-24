@@ -36,6 +36,7 @@
         <dependency>
             <groupId>net.sf.jt400</groupId>
             <artifactId>jt400</artifactId>
+            <classifier>jt400_jdk8</classifier>
             <version>10.6</version>
         </dependency>
 

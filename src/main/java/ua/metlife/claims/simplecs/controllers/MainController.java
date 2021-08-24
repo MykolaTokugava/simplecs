@@ -38,4 +38,10 @@ public class MainController {
 
         return csSystemRepository.findAll();
     }
+
+    @GetMapping(path="/hello")
+    public @ResponseBody String getHello() {
+        return "Hello!";
+    }
+
 }

@@ -26,6 +26,7 @@ ua\metlife\claims\simplecs\entity\crs\CrsfDclPk.class
 ua\metlife\claims\simplecs\entity\crs\CrsfPol.class
 ua\metlife\claims\simplecs\entity\crs\CrsfDcl.class
 ua\metlife\claims\simplecs\entity\crs\CrsfSrbHi.class
+com\ibm\as400\access\CustomAs400JDBCConnection.class
 ua\metlife\claims\simplecs\entity\crl\CrlTpCoef.class
 ua\metlife\claims\simplecs\entity\crs\CrsfRsbPk.class
 ua\metlife\claims\simplecs\entity\crs\CrsfRsb.class
