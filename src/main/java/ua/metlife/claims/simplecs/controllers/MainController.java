@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import ua.metlife.claims.simplecs.entity.csr.CsSystem;
+import ua.metlife.claims.simplecs.repo.CrsfClmRepository;
 import ua.metlife.claims.simplecs.repo.CsSystemRepository;
 import ua.metlife.claims.simplecs.repo.CsSystemTransaction;
 
@@ -12,6 +13,9 @@ import ua.metlife.claims.simplecs.repo.CsSystemTransaction;
 public class MainController {
     @Autowired // This means to get the bean called userRepository
     private CsSystemRepository csSystemRepository;
+
+    @Autowired // This means to get the bean called userRepository
+    private CrsfClmRepository crsfClmRepository;
 
     @GetMapping(path="/addtest")
     public @ResponseBody String addNewUser () {
@@ -35,6 +39,8 @@ public class MainController {
         for (CsSystem item : csSystemRepository.findAll() ) {
             System.out.println("name:" + item.getSystemName());
         }
+
+        crsfClmRepository.getNextClaimNumber(2021);
 
         return csSystemRepository.findAll();
     }

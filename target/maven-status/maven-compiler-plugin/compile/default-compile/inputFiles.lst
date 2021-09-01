@@ -8,6 +8,7 @@ E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\csr\CsAcciden
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsFclmHi.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crl\CrlTariffPlan.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfRsbHi.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\processing\DateTools.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crl\CrlGeneralBank.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\ClmCrmNigo.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfClm.java
@@ -23,6 +24,7 @@ E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsFpcd.j
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\utils\processing.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsFcccPk.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\csr\CsIdLink.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\repo\CrsfClmRepository.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crl\CrlBank.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfSrbHi.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\App.java
@@ -32,6 +34,9 @@ E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crl\CrlTpCoef
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfDclPk.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfPol.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfRsb.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\processing\ClaimsUtils.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\repo\CrsfClmRepositoryImpl.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\repo\CsSystemRepositoryImpl.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfDcl.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crl\CrlPayment.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsFccc.java
@@ -39,3 +44,4 @@ E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crl\CrlPolicy
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crl\CrlGeneral1c.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfSrb.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\csr\CsRegister.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\processing\Convert.java

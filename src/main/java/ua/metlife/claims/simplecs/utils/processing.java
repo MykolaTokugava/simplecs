@@ -54,6 +54,15 @@ public class processing {
 //    }
 //
 //
+////--------------------------------------------------------------------------
+//private String claimNumberSuffix(Integer counter){
+//
+//    String suffix = ".000001";
+//    if (counter != null) {
+//        suffix = "."+String.format("%06d", counter);
+//    }
+//    return suffix;
+//}
 //    //--------------------------------------------------------------------------
 //    //for POLNO
 //    public String nextClaimNumber(Integer year) {
@@ -107,8 +116,8 @@ public class processing {
 //        try {
 //            csObject.setCsClaimPolicyNumber(nextClaimNumber(null));
 //            PreparedStatement stmt = GlobalConnection.getSqlConnection().prepareStatement(sql);
-//            stmt.setString(1, csObject.getCsClaimPolicyNumber());
-//            stmt.setString(2, csObject.getCsPolNo());
+//            stmt.setString(1, csObject.getCsClaimPolicyNumber()); // +1
+//            stmt.setString(2, csObject.getCsPolNo()); // from exist or generate for user
 //            stmt.setString(3, "P");
 //            stmt.setString(4, "");
 //            stmt.setString(5, "U");
