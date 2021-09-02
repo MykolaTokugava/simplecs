@@ -722,6 +722,14 @@ public class Convert {
 
     public static String getDateFormat() {
         return "dd.MM.yyyy";
-    }    
+    }
 
+
+    public static String dateToStringWithFormat(Date date, String format) {
+        if (date == null) {
+            return "";
+        }
+
+        return (new SimpleDateFormat(format)).format(date);
+    }
 }
