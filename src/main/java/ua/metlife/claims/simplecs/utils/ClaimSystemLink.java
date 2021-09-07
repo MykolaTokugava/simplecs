@@ -101,7 +101,7 @@ public class ClaimSystemLink {
         return false;
     }
 
-    public static String nextClaimNumber(Connection conn, Integer year) {
+    public static String nextClaimNumberForClaim(Connection conn, Integer year) {
         if (year == null) {
             year = Integer.parseInt(String.valueOf(DateTools.getCurrentYear().toString().substring(2, 4)));
         } else {
@@ -118,6 +118,7 @@ public class ClaimSystemLink {
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setInt(1, year);
             ResultSet rs = stmt.executeQuery();
+
             while (rs.next()) {
                 counter = rs.getInt("LN") + 1;
                 break;
@@ -131,6 +132,38 @@ public class ClaimSystemLink {
         String suffix = claimNumberSuffix (counter);
         res =  " " + year + suffix;
         System.out.println("ClaimSystemLink.nextClaimNumber(), claim number is: "+res);
+        return res;
+    }
+
+    public static String nextClaimNumberForCrl(Connection conn, Integer year) {
+        if (year == null) {
+            year = Integer.parseInt(String.valueOf(DateTools.getCurrentYear().toString().substring(2, 4)));
+        } else {
+            year = Integer.parseInt(String.valueOf(year.toString().substring(2, 4)));
+        }
+        String res = null;
+        Integer counter = null;
+        String sql = ""
+                + "select POLNO, substr(POLNO,5,10) as LNC "
+                + "from  CRSFCRP  "
+                + "where substr(POLNO,2,2)= ? "
+                + "ORDER BY substr(POLNO,5,10) DESC";
+        try {
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setInt(1, year);
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                counter = rs.getInt("LNC") + 1;
+                break;
+            }
+            stmt.close();
+
+        } catch (SQLException err) {
+            err.getMessage();
+        }
+
+        String suffix = claimNumberSuffix (counter);
+        res =  " " + year + suffix;
         return res;
     }
 

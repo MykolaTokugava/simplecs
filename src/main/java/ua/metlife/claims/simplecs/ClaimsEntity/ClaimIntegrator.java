@@ -10,6 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import ua.metlife.claims.simplecs.entity.crs.CrsfDcl;
 import ua.metlife.claims.simplecs.entity.crs.CrsfPol;
 
+import javax.persistence.EntityManager;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,9 +29,10 @@ public class ClaimIntegrator {
     private ClaimActionEnum claimActionStatus;
     private ExternalInitData externalInitData;
     private List<String> polUniq;
+    private EntityManager entityManager;
 
     private CrsfPol crsfPol;
-    CrsfDcl crsfDcl;
+    private CrsfDcl crsfDcl;
     
     public List<String> getPolUniq() {
         if (polUniq==null) {

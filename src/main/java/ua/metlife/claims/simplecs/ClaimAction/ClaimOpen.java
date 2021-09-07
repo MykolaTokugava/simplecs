@@ -12,8 +12,9 @@ import ua.metlife.claims.simplecs.entity.crs.*;
 import ua.metlife.claims.simplecs.processing.Config;
 import ua.metlife.claims.simplecs.processing.Convert;
 import ua.metlife.claims.simplecs.processing.DateTools;
+import ua.metlife.claims.simplecs.utils.ClaimSystemLink;
 import ua.metlife.claims.simplecs.utils.ClaimsUtils;
-import ua.metlife.claims.simplecs.utils.DbConfigCrl;
+import ua.metlife.claims.simplecs.utils.ConnectionFromJpa;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
@@ -35,8 +36,9 @@ public class ClaimOpen {
     public ClaimOpen(ClaimIntegrator claimIntegrator) {
 
         log.info("Claim Open action...");
-        String clmNumber = ClaimsUtils.getNewClaimNumberOlas();
-        log.info("clmNumber = " + clmNumber);
+        //String clmNumber = ClaimsUtils.getNewClaimNumberOlas(claimIntegrator.getEntityManager());
+        String clmNumber = ClaimSystemLink.nextClaimNumberForClaim(ConnectionFromJpa.getConnection(claimIntegrator.getEntityManager()), null);
+        log.info("clmNumberFrom CRSFCLM: " + clmNumber);
 
         GeneralClaimData cgData = claimIntegrator.getGeneralClaimData();
         cgData.setClaimPolicyNumber(clmNumber);
@@ -47,7 +49,7 @@ public class ClaimOpen {
         CAUSE = cgData.getClaimCause() == null ? "" : cgData.getClaimCause();
         EVENT = cgData.getClaimReason() == null ? "" : cgData.getClaimReason();
 
-        String lastHistoryNumber = ClaimsUtils.getLastHistoryNumber(clmNumber);
+        String lastHistoryNumber = ClaimsUtils.getLastHistoryNumber(claimIntegrator.getEntityManager(),clmNumber);
         log.info("lastHistoryNumber = " + lastHistoryNumber);
         ClaimPolicy сlaimPolicyMain = claimIntegrator.getMainPolicy().getClaimPolicy();
         BigDecimal coverage = ClaimsUtils.calculateTotalCoverage(claimIntegrator.getGeneralClaimData().getClaimsPlanCodes());//??
@@ -327,7 +329,7 @@ public class ClaimOpen {
         //----        
 
         //----transaction
-        EntityManager em = DbConfigCrl.getEntityManager(); //R2D2
+        EntityManager em = claimIntegrator.getEntityManager(); //R2D2
         EntityTransaction newTr = em.getTransaction();
 
         newTr.begin();

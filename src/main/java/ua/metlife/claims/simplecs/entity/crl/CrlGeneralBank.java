@@ -52,6 +52,18 @@ public class CrlGeneralBank implements Serializable {
     private String customerPassport;
     @Column(name = "BANK_BRANCH_CODE")
     private String bankBranchCode;
+    @Column(name = "INSURANT_ID")
+    private String insurantId;
+    @Column(name = "INSURANT_FULL_NAME")
+    private String insurantFullName;
+    @Column(name = "INSURANT_ADDRESS")
+    private String insurantAddress;
+    @Column(name = "INSURANT_PASSPORT")
+    private String insurantPassport;
+    @Column(name = "INSURANT_DOB")
+    private String insurantDob;
+    @Column(name = "CITIZENSHIP")
+    private String citizenship;
 
     @JoinColumn(name = "POLICY_ID", referencedColumnName = "ID")
     @OneToOne(optional = false)

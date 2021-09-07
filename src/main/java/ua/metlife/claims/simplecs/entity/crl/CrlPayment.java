@@ -79,9 +79,15 @@ public class CrlPayment implements Serializable {
     @JoinColumn(name = "TP_ID", referencedColumnName = "TP_ID")
     @ManyToOne
     private CrlTariffPlan tpId;
-    @JoinColumn(name = "GENERAL_ID", referencedColumnName = "ID")
+
+    @JoinColumn(name = "GENERAL_ID", referencedColumnName = "ID", insertable = false, updatable = false, nullable = true)
     @ManyToOne(optional = false)
     private CrlGeneral1c generalId;
+
+    @JoinColumn(name = "ID", referencedColumnName = "RELATED_1C_GEN_ID", insertable = false, updatable = false, nullable = true)
+    @ManyToOne(optional = false)
+    private CrlGeneralBank crlGeneralBank;
+
 
     public CrlPayment() {
     }
@@ -290,6 +296,7 @@ public class CrlPayment implements Serializable {
     }
 
     public CrlGeneral1c getGeneralId() {
+        if (generalId==null) return new CrlGeneral1c();
         return generalId;
     }
 
@@ -297,4 +304,11 @@ public class CrlPayment implements Serializable {
         this.generalId = generalId;
     }
 
+    public CrlGeneralBank getCrlGeneralBank() {
+        return crlGeneralBank;
+    }
+
+    public void setCrlGeneralBank(CrlGeneralBank crlGeneralBank) {
+        this.crlGeneralBank = crlGeneralBank;
+    }
 }

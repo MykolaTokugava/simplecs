@@ -12,6 +12,7 @@ import ua.metlife.claims.simplecs.ClaimsEntity.ClaimPolicy;
 import ua.metlife.claims.simplecs.ClaimsEntity.ClientData;
 import ua.metlife.claims.simplecs.processing.DateTools;
 
+import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -28,7 +29,7 @@ import java.util.TreeMap;
 @Data
 public class ClaimsUtils {
 
-    public static String getNewClaimNumberOlas() {
+    public static String getNewClaimNumberOlas(EntityManager entityManager) {
         String claimNumber = "";
         int curYear = Calendar.getInstance().get(Calendar.YEAR) - 2000;
         String sql = "select max(cast(substr(CLMNO,5,10) as int))+1 as LN "
@@ -37,7 +38,7 @@ public class ClaimsUtils {
         log.info("sql = " + sql);
         log.info("curYear = " + curYear);
 
-        Query query = DbConfigCrl.getEntityManager().createNativeQuery(sql); //R2D2
+        Query query = entityManager.createNativeQuery(sql); //R2D2
 
         claimNumber = " " + curYear + "." + getWithZerro("", ("" + (Integer) (query.setParameter(1, curYear).getResultList().get(0))));
 
@@ -80,11 +81,11 @@ log.info("counter = " + counter);
         return res;
     }    
 
-    public static String getLastHistoryNumber(String claimNumber) {
+    public static String getLastHistoryNumber(EntityManager entityManager, String claimNumber) {
         String historyNumber = "0001";
         String sql = "select max(cast(substr(SEQNO,3,4) as int))+1 as LN from  CRSFCLMHI  where CLMNO = ?1 ";
 
-        Query query = DbConfigCrl.getEntityManager().createNativeQuery(sql);
+        Query query = entityManager.createNativeQuery(sql);
 
         Integer res = (Integer) (query.setParameter(1, claimNumber).getResultList().get(0));
         log.info("getLastHistoryNumber res = " + res);
@@ -102,11 +103,11 @@ log.info("counter = " + counter);
 
     }
 
-    public static String getNextSettledNumber(String claimNumber) {
+    public static String getNextSettledNumber(EntityManager entityManager, String claimNumber) {
         String historyNumber = "0001";
         String sql = "select max(cast(substr(SETSETNO,3,4) as int))+1 as LN from CRSFSET where substr(SETCURRNO,1,2)=SUBSTR(CHAR(CURRENT DATE, ISO), 3, 2) AND SETCLMNO = ?1 ";
 
-        Query query = DbConfigCrl.getEntityManager().createNativeQuery(sql);
+        Query query = entityManager.createNativeQuery(sql);
 
         Integer res = (Integer) (query.setParameter(1, claimNumber).getResultList().get(0));
         log.info("getLastSetteledNumber res = " + res);
@@ -197,11 +198,11 @@ log.info("counter = " + counter);
         return item.getRelation().equals("I") ? сlaimPolicy.getInsured() : сlaimPolicy.getPayer();
     }
 
-    public static String getNextSETCURRNO() {
+    public static String getNextSETCURRNO(EntityManager entityManager) {
 
         String sql = "select max(cast(substr(SETCURRNO,3) as int)) as LN from CRSFSET  where substr(SETCURRNO,1,2)=SUBSTR(CHAR(CURRENT DATE, ISO), 3, 2)";
         Integer year = DateTools.getCurrentYear() - 2000;
-        Query query = DbConfigCrl.getEntityManager().createNativeQuery(sql);
+        Query query = entityManager.createNativeQuery(sql);
 
         Integer res = (Integer) (query.getResultList().get(0));
         if (res == null) {

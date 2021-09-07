@@ -11,6 +11,9 @@ public class processing {
     /*
     Scenario > Add Claim from Credit Life
 
+    cs_id_link -> C_POLICY_ID || C_TAXCODE //идентификатор есть ли уже номер полиса
+    INSERT INTO CRSFCRP (POLNO, PLOB, EFFDTE, MATDTE, ONAME, ADRS1, ADRS2, ZIP, CITY, RECUSR, RECDTE) VALUES
+    ('C21.005675', '70', '20210415', '20210515', 'віаріва іварівар іваріо     ', '                              ', '                              ', '      ', '                              ', 'TKACHENKO ', '20210513');
     1. CRSFCRP > (if not exist for this Insured-> check CS_ID_LINK
     2. CRSFPOL > Add new claim
     3. CRSFCRR > Add products if it not exist for CRSFGPL.GPLPOLNO

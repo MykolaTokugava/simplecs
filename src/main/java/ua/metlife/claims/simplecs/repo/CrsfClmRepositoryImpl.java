@@ -31,7 +31,7 @@ public class CrsfClmRepositoryImpl {
         //System.out.println("res =>= " + items.size());
         //items.forEach(item -> System.out.println("number:" + item.getIname()));
 
-        ClaimSystemLink.nextClaimNumber(conn, 2021);
+        ClaimSystemLink.nextClaimNumberForClaim(conn, 2021);
 
 
         try {

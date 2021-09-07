@@ -3,10 +3,12 @@ package ua.metlife.claims.simplecs.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import ua.metlife.claims.simplecs.ClaimAction.CrlClaimOpen;
 import ua.metlife.claims.simplecs.entity.csr.CsSystem;
 import ua.metlife.claims.simplecs.repo.CrsfClmRepository;
 import ua.metlife.claims.simplecs.repo.CsSystemRepository;
 import ua.metlife.claims.simplecs.repo.CsSystemTransaction;
+import ua.metlife.claims.simplecs.utils.DbEnvData;
 
 @Controller // This means that this class is a Controller
 @RequestMapping(path="/cs") // This means URL's start with /demo (after Application path)
@@ -17,11 +19,17 @@ public class MainController {
     @Autowired // This means to get the bean called userRepository
     private CrsfClmRepository crsfClmRepository;
 
-    @GetMapping(path="/addtest")
-    public @ResponseBody String addNewUser () {
+    @Autowired // This means to get the bean called userRepository
+    private DbEnvData dbEnvData;
 
-        new CsSystemTransaction().doTransaction(csSystemRepository);
-        return "Saved2";
+    @Autowired
+    CrlClaimOpen crlClaimOpen;
+
+    @GetMapping(path="/addclaim")
+    public @ResponseBody String addNewClaim () {
+        crlClaimOpen.claimOpen(dbEnvData.getEntityManager(), null);
+        //new CsSystemTransaction().doTransaction(csSystemRepository);
+        return "Saved";
     }
 
     @PostMapping(path="/add")
@@ -34,13 +42,16 @@ public class MainController {
 
     @GetMapping(path="/all")
     public @ResponseBody Iterable<CsSystem> getAllUsers() {
+
         // This returns a JSON or XML with the users
 
-        for (CsSystem item : csSystemRepository.findAll() ) {
-            System.out.println("name:" + item.getSystemName());
-        }
+//        for (CsSystem item : csSystemRepository.findAll() ) {
+//            System.out.println("name:" + item.getSystemName());
+//        }
 
         crsfClmRepository.getNextClaimNumber(2021);
+
+        //dbEnvData.getEntityManager();
 
         return csSystemRepository.findAll();
     }

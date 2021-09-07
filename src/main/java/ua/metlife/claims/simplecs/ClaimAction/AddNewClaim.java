@@ -1,8 +1,6 @@
 package ua.metlife.claims.simplecs.ClaimAction;
 
-import ua.metlife.claims.simplecs.ClaimsEntity.ClaimIntegrator;
-import ua.metlife.claims.simplecs.ClaimsEntity.ClaimPlanCode;
-import ua.metlife.claims.simplecs.ClaimsEntity.ClaimPropertyObject;
+import ua.metlife.claims.simplecs.ClaimsEntity.*;
 import ua.metlife.claims.simplecs.processing.DateTools;
 
 import java.util.ArrayList;
@@ -37,6 +35,31 @@ public class AddNewClaim {
             claimIntegrator = new ClaimIntegrator();
         }
         return claimIntegrator;
+    }
+
+    public void prepareData() {
+
+        ExternalInitData eiData = new ExternalInitData();
+        eiData.setInsuredOrPayer(true);
+        eiData.setPolNumber("!!!");
+        eiData.setSystem(SystemsEnum.CRL);
+        eiData.setClaimNumber(null);
+        eiData.setLdapLogin(new com.sun.security.auth.module.NTSystem().getName().toLowerCase());
+
+            claimIntegrator = getClaimIntegrator();
+            claimIntegrator.setExternalInitData(eiData);
+
+        if (claimIntegrator.getPolUniq().contains(claimIntegrator.getExternalInitData().getPolNumber().trim()) == true) {
+            return;
+        } else {
+            claimIntegrator.getPolUniq().add(claimIntegrator.getExternalInitData().getPolNumber().trim());
+        }
+
+        if (claimIntegrator.getExternalInitData().getClaimNumber() == null) //claim does not exist
+        {
+            new CrsInit(claimIntegrator);
+        }
+
     }
 
     public void addNewClaim() {
@@ -75,7 +98,6 @@ public class AddNewClaim {
 //        claimIntegrator.getGeneralClaimData().setClaimCause(jComboBoxClaimCouse.getSelectedItem() == null ? " " : ((CrsFccc) jComboBoxClaimCouse.getSelectedItem()).getCode());
 //        claimIntegrator.getGeneralClaimData().setClaimReason((CrsFccc) jComboBoxReasonGroup.getSelectedItem() == null ? " " : ((CrsFccc) jComboBoxReasonGroup.getSelectedItem()).getCode());
 
-//        ClaimDoToCrs claimDo = new ClaimDoToCrs();
         ClaimOpen claimOpen = new ClaimOpen(claimIntegrator);
 
     }

@@ -2,7 +2,6 @@ ua\metlife\claims\simplecs\ClaimsEntity\GeneralClaimData.class
 ua\metlife\claims\simplecs\processing\DateTools.class
 ua\metlife\claims\simplecs\entity\crl\CrlBank.class
 ua\metlife\claims\simplecs\processing\Config.class
-ua\metlife\claims\simplecs\utils\DbConfigCrl$1.class
 ua\metlife\claims\simplecs\entity\crs\ClmCrmNigo.class
 ua\metlife\claims\simplecs\entity\crs\CrsfPolPk.class
 ua\metlife\claims\simplecs\utils\ConnectionFromJpa.class
@@ -18,6 +17,7 @@ ua\metlife\claims\simplecs\entity\crs\CrsfRsbHiPk.class
 ua\metlife\claims\simplecs\entity\crs\CrsfClm.class
 ua\metlife\claims\simplecs\ClaimsEntity\ClaimCollector.class
 ua\metlife\claims\simplecs\ClaimsEntity\CreditLifeObject.class
+ua\metlife\claims\simplecs\utils\DbEnvData.class
 ua\metlife\claims\simplecs\ClaimsEntity\ClaimPlanCode.class
 ua\metlife\claims\simplecs\ClaimsEntity\SystemsEnum.class
 ua\metlife\claims\simplecs\controllers\MainController.class
@@ -31,13 +31,17 @@ ua\metlife\claims\simplecs\ClaimsEntity\PolicyAgent.class
 ua\metlife\claims\simplecs\entity\csr\CsRegister.class
 ua\metlife\claims\simplecs\entity\crs\CrsfRsbHi.class
 ua\metlife\claims\simplecs\entity\crl\CrlTariffPlan.class
+ua\metlife\claims\simplecs\repo\CrlGeneral1cRepository.class
 ua\metlife\claims\simplecs\entity\crl\CrlGeneralBank.class
 ua\metlife\claims\simplecs\entity\crs\CrsFclmHi.class
 ua\metlife\claims\simplecs\repo\CrsfClmRepository.class
+ua\metlife\claims\simplecs\repo\CrlGeneralBankRepository.class
 ua\metlife\claims\simplecs\utils\ClaimSystemLink.class
 ua\metlife\claims\simplecs\repo\CsSystemRepository.class
+ua\metlife\claims\simplecs\ClaimAction\CrsInit.class
 ua\metlife\claims\simplecs\entity\crl\CrlGeneral1c.class
 ua\metlife\claims\simplecs\repo\CsSystemTransaction.class
+ua\metlife\claims\simplecs\repo\CrlPaymentRepository.class
 ua\metlife\claims\simplecs\repo\CrsfClmRepositoryImpl.class
 ua\metlife\claims\simplecs\processing\ClaimsUtils.class
 ua\metlife\claims\simplecs\ClaimsEntity\ClaimPolicy.class
@@ -46,6 +50,7 @@ ua\metlife\claims\simplecs\entity\csr\CsIdLink.class
 ua\metlife\claims\simplecs\utils\processing.class
 ua\metlife\claims\simplecs\ClaimAction\AddNewClaim.class
 ua\metlife\claims\simplecs\ClaimsEntity\ClientData.class
+ua\metlife\claims\simplecs\ClaimAction\CrlClaimOpen.class
 ua\metlife\claims\simplecs\ClaimsEntity\ClaimActionEnum.class
 ua\metlife\claims\simplecs\ClaimsEntity\ClientInterface.class
 ua\metlife\claims\simplecs\entity\csr\CsSystem.class
@@ -53,7 +58,6 @@ ua\metlife\claims\simplecs\entity\crl\CrlPayment.class
 ua\metlife\claims\simplecs\repo\CsSystemRepositoryImpl.class
 ua\metlife\claims\simplecs\processing\Convert.class
 ua\metlife\claims\simplecs\entity\crs\CrsfPol.class
-ua\metlife\claims\simplecs\utils\DbConfigCrl.class
 ua\metlife\claims\simplecs\utils\ConnectionFromJpa$MyWork.class
 ua\metlife\claims\simplecs\ClaimsEntity\ClaimIntegrator.class
 ua\metlife\claims\simplecs\entity\crs\CrsfSrbHi.class
