@@ -40,6 +40,9 @@ public class CrsfPol implements Serializable {
     @Column(name = "POLNO")
     private String polno;
 
+    @Column(name = "CLMON")
+    private String clmon;
+
     @Column(name = "CRFID")
     private String crfid;
 
@@ -143,23 +146,23 @@ public class CrsfPol implements Serializable {
     private String recdte;
 
     @JoinColumn(name = "CLMNO", referencedColumnName = "CLMNO", insertable = false, updatable = false, nullable = true)
-    @OneToOne(optional = false)
+    @OneToOne(optional = true)
     private CrsfClm crsfClm;
-    
+
     @JoinColumn(name = "RSBCLMNO", referencedColumnName = "CLMNO", insertable = false, updatable = false)
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<CrsfRsb> ridersRsbList;
 
-    
+
     @JoinColumn(name = "CLMNO", referencedColumnName = "CLMNO", insertable = false, updatable = false)
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<CrsFclmHi> claimHistory;
-    
-    
+
+
     @JoinColumn(name = "HRSBCLMNO", referencedColumnName = "CLMNO", insertable = false, updatable = false)
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<CrsfRsbHi> claimRsbHistory;
-    
+
     @JoinColumn(name = "SETCLMNO", referencedColumnName = "CLMNO", insertable = false, updatable = false)
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<CrsfSet> setList;

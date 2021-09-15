@@ -8,6 +8,7 @@ import java.util.List;
 public interface CrlGeneralBankRepository extends CrudRepository<CrlGeneralBank, Integer> {
 
     CrlGeneralBank findTopByOrderByIdDesc();
+    CrlGeneralBank findByRelated1cGenIdData(Integer id);
     List<CrlGeneralBank> findAll();
 
 }

@@ -20,11 +20,11 @@ import java.math.BigDecimal;
 @Table(name = "CRL_GENERAL_BANK")
 @XmlRootElement
 @Data
-@NamedQueries({
-    @NamedQuery(name = "CrlGeneralBank.findAll", query = "SELECT c FROM CrlGeneralBank c"),
-    @NamedQuery(name = "CrlGeneralBank.findClaimsByDateClaim", query = "SELECT b  FROM CrlGeneralBank b , CrlGeneral1c c where c.id = b.related1cGenId AND c.claim=1 AND c.claimDate>=:paidDate order by b.taxcode, b.customerPassport"),
-    @NamedQuery(name = "CrlGeneralBank.findClaimsByDateClaimExclude", query = "SELECT b  FROM CrlGeneralBank b , CrlGeneral1c c where b.policyId.id not in ( select a.idLink.clPolicyId from CsAccidents a) AND c.id = b.related1cGenId AND c.claim=1 AND c.claimDate>=:paidDate order by b.taxcode, b.customerPassport")
-})
+//@NamedQueries({
+//    @NamedQuery(name = "CrlGeneralBank.findAll", query = "SELECT c FROM CrlGeneralBank c"),
+//    @NamedQuery(name = "CrlGeneralBank.findClaimsByDateClaim", query = "SELECT b  FROM CrlGeneralBank b , CrlGeneral1c c where c.id = b.related1cGenId AND c.claim=1 AND c.claimDate>=:paidDate order by b.taxcode, b.customerPassport"),
+//    @NamedQuery(name = "CrlGeneralBank.findClaimsByDateClaimExclude", query = "SELECT b  FROM CrlGeneralBank b , CrlGeneral1c c where b.policyId.id not in ( select a.idLink.clPolicyId from CsAccidents a) AND c.id = b.related1cGenId AND c.claim=1 AND c.claimDate>=:paidDate order by b.taxcode, b.customerPassport")
+//})
 public class CrlGeneralBank implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -34,6 +34,10 @@ public class CrlGeneralBank implements Serializable {
     private Integer id;
     @Column(name = "TAXCODE")
     private String taxcode;
+
+    @Column(name = "RELATED_1C_GEN_ID")
+    private Integer related1cGenIdData;
+
     @Column(name = "ISSUE_DATE")
     private String issueDate;
     @Column(name = "MATURE_DATE")
@@ -65,16 +69,16 @@ public class CrlGeneralBank implements Serializable {
     @Column(name = "CITIZENSHIP")
     private String citizenship;
 
-    @JoinColumn(name = "POLICY_ID", referencedColumnName = "ID")
-    @OneToOne(optional = false)
-    private CrlPolicy policyId;
-
-    @JoinColumn(name = "TP_ID", referencedColumnName = "TP_ID")
-    @OneToOne(optional = false, fetch = FetchType.LAZY)
-    private CrlTariffPlan tpId;
-    @JoinColumn(name = "RELATED_1C_GEN_ID", referencedColumnName = "ID")
-    @OneToOne(optional = false)
-    private CrlGeneral1c related1cGenId;
+//    @JoinColumn(name = "POLICY_ID", referencedColumnName = "ID")
+//    @OneToOne(optional = false)
+//    private CrlPolicy policyId;
+//
+//    @JoinColumn(name = "TP_ID", referencedColumnName = "TP_ID")
+//    @OneToOne(optional = false, fetch = FetchType.LAZY)
+//    private CrlTariffPlan tpId;
+//    @JoinColumn(name = "RELATED_1C_GEN_ID", referencedColumnName = "ID")
+//    @OneToOne(optional = false)
+//    private CrlGeneral1c related1cGenId;
 
 
     /*

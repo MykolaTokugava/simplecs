@@ -21,13 +21,13 @@ import java.math.BigDecimal;
 //@IdClass(CrsfClmPk.class)
 @Table(name = "CRSFCLM")
 @XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "CrsfClm.findAll", query = "SELECT g FROM CrsfClm g"),
-    @NamedQuery(name = "CrsfClm.findById", query = "SELECT g FROM CrsfClm g where g.clmno=:clmNumber"),
-    @NamedQuery(name = "CrsfClm.findClaimsByDateClaim", query = "SELECT g FROM CrsfClm g where g.evtdt>=:paidDate order by g.iname"),
-    @NamedQuery(name = "CrsfClm.findLastClaimNumberForYear", query = "select g.clmno from CrsfClm g where substr(g.clmno,2,2)= :year " +
-            "ORDER BY substr(g.clmno,5,10) DESC")
-})
+//@NamedQueries({
+//    @NamedQuery(name = "CrsfClm.findAll", query = "SELECT g FROM CrsfClm g"),
+//    @NamedQuery(name = "CrsfClm.findById", query = "SELECT g FROM CrsfClm g where g.clmno=:clmNumber"),
+//    @NamedQuery(name = "CrsfClm.findClaimsByDateClaim", query = "SELECT g FROM CrsfClm g where g.evtdt>=:paidDate order by g.iname"),
+//    @NamedQuery(name = "CrsfClm.findLastClaimNumberForYear", query = "select g.clmno from CrsfClm g where substr(g.clmno,2,2)= :year " +
+//            "ORDER BY substr(g.clmno,5,10) DESC")
+//})
 
 public class CrsfClm implements Serializable {
 

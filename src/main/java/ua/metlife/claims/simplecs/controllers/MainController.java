@@ -2,16 +2,20 @@ package ua.metlife.claims.simplecs.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import ua.metlife.claims.simplecs.ClaimAction.CrlClaimOpen;
 import ua.metlife.claims.simplecs.entity.csr.CsSystem;
 import ua.metlife.claims.simplecs.repo.CrsfClmRepository;
 import ua.metlife.claims.simplecs.repo.CsSystemRepository;
-import ua.metlife.claims.simplecs.repo.CsSystemTransaction;
 import ua.metlife.claims.simplecs.utils.DbEnvData;
 
-@Controller // This means that this class is a Controller
-@RequestMapping(path="/cs") // This means URL's start with /demo (after Application path)
+import java.util.Map;
+
+@Controller
+//@RestController // This means that this class is a Controller
+//@RequestMapping(path="/cs") // This means URL's start with /demo (after Application path)
+@RequestMapping
 public class MainController {
     @Autowired // This means to get the bean called userRepository
     private CsSystemRepository csSystemRepository;
@@ -25,9 +29,18 @@ public class MainController {
     @Autowired
     CrlClaimOpen crlClaimOpen;
 
-    @GetMapping(path="/addclaim")
-    public @ResponseBody String addNewClaim () {
+    @GetMapping(path="/addlast/")
+    public @ResponseBody String addLastClaim ()
+    {
         crlClaimOpen.claimOpen(dbEnvData.getEntityManager(), null);
+        return "Saved last...";
+    }
+
+
+    @GetMapping(path="/addclaim/{id}")
+    public @ResponseBody String addNewClaim (@PathVariable("id") Integer id, Model model)
+    {
+        crlClaimOpen.claimOpen(dbEnvData.getEntityManager(), id);
         //new CsSystemTransaction().doTransaction(csSystemRepository);
         return "Saved";
     }
@@ -60,5 +73,25 @@ public class MainController {
     public @ResponseBody String getHello() {
         return "Hello!";
     }
+
+
+    @GetMapping("/login")
+    public String login(Map<String, Object> model) {
+        return "login";
+    }
+
+    @PostMapping("/login")
+    public String userLogin(
+            @RequestParam String username,
+            @RequestParam String password
+    ) {
+        return "redirect:/";
+    }
+
+    @GetMapping("/")
+    public String greeting(Map<String, Object> model) {
+        return "greeting";
+    }
+
 
 }

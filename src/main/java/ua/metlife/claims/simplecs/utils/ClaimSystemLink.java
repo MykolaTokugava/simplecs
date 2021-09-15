@@ -131,7 +131,6 @@ public class ClaimSystemLink {
 
         String suffix = claimNumberSuffix (counter);
         res =  " " + year + suffix;
-        System.out.println("ClaimSystemLink.nextClaimNumber(), claim number is: "+res);
         return res;
     }
 
@@ -163,7 +162,7 @@ public class ClaimSystemLink {
         }
 
         String suffix = claimNumberSuffix (counter);
-        res =  " " + year + suffix;
+        res =  "C" + year + suffix;
         return res;
     }
 

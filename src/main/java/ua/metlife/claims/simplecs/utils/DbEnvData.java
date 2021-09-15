@@ -11,7 +11,14 @@ public class DbEnvData {
     @PersistenceContext
     private EntityManager entityManager;
 
+
+//    @PersistenceUnit(unitName = "readwrite.config")
+//    private EntityManagerFactory entityManagerFactory;
+
+
+
     public EntityManager getEntityManager() {
+        //return entityManagerFactory.createEntityManager();
         return entityManager;
     }
 
