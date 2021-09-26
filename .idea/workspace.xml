@@ -2,35 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9194258a-5207-4f64-ac34-1b465a3a883c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/controllers/LanguagesСontroller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/controllers/MyAccessDeniedHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/Languages.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/repo/CrsfPolRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/repo/LanguagesRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/repo/PersonRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ua/metlife/claims/simplecs/controllers/ClaimСontrollerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ua/metlife/claims/simplecs/entity/crl/PersonTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/ClaimAction/CrlClaimOpen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/ClaimAction/CrlClaimOpen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/controllers/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/CrlGeneralBank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/CrlGeneralBank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/controllers/LanguagesСontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/controllers/ClaimСontroller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/CrlPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/CrlPayment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crs/CrsfClm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crs/CrsfClm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crs/CrsfPol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crs/CrsfPol.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/repo/CrlGeneralBankRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/repo/CrlGeneralBankRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/utils/ClaimSystemLink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/utils/ClaimSystemLink.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/utils/DbEnvData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/utils/DbEnvData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-prod.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-prod.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/repo/CrlPaymentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/repo/CrlPaymentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/service/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/service/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/service/config/a88.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/languages.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/clients.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/lang/actionForm.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/lang/actionForm.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/lang/langList.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/lang/langList.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/simplecs-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/simplecs-1.0-SNAPSHOT.jar.original" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -44,11 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/controllers/MainController.java">
+      <file leaf-file-name="CrlClaimOpen.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/ClaimAction/CrlClaimOpen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="170">
+              <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -56,11 +43,83 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ApplicationFilterChain.class" pinned="false" current-in-tab="true">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.28/tomcat-embed-core-8.5.28.jar!/org/apache/catalina/core/ApplicationFilterChain.class">
+      <file leaf-file-name="Person.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/Person.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="76" column="122" selection-start-line="76" selection-start-column="122" selection-end-line="76" selection-end-column="122" />
+            <state relative-caret-position="102">
+              <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="langList.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/lang/langList.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="94" selection-start-line="21" selection-start-column="94" selection-end-line="21" selection-end-column="94" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClaimСontroller.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/controllers/ClaimСontroller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClaimСontrollerTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ua/metlife/claims/simplecs/controllers/ClaimСontrollerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Optional.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/Optional.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CrlPaymentRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/repo/CrlPaymentRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="9" column="71" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CrlPayment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/CrlPayment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1428">
+              <caret line="98" column="45" selection-start-line="98" selection-start-column="45" selection-end-line="98" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DateTools.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/processing/DateTools.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Convert.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/processing/Convert.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4437">
+              <caret line="270" column="25" selection-start-line="270" selection-start-column="25" selection-end-line="270" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -71,23 +130,12 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ClaimPolicy</find>
-      <find>EVENT</find>
-      <find>fid</find>
-      <find>Faok</find>
-      <find>claimCategory</find>
-      <find>CrlPayment</find>
-      <find>generalId</find>
-      <find>crl_general_bank_id</find>
-      <find>insert=&quot;false&quot;</find>
-      <find>ins</find>
-      <find>Castat</find>
-      <find>setStatus</find>
       <find>Bilmod</find>
       <find>Modprm</find>
       <find>ag1fc</find>
@@ -99,13 +147,24 @@
       <find>javax</find>
       <find>hostname</find>
       <find>ViewResolver</find>
-      <find>User found</find>
-      <find>User found:</find>
+      <find />
       <find>loadUserByUsername</find>
-      <find>Sign in</find>
       <find>security</find>
       <find>known</find>
       <find>findByCode</find>
+      <find>langList.ftl</find>
+      <find>Languages</find>
+      <find>model.addAttribute(&quot;languages&quot;,</find>
+      <find>languages</find>
+      <find>languagesRepo</find>
+      <find>entityManager</find>
+      <find>IIDNO</find>
+      <find>crlGeneralBank</find>
+      <find>getInsurantPassport()</find>
+      <find>crlGeneralBank.getInsurantPassport()</find>
+      <find>addcla</find>
+      <find>stringToDateFormatString</find>
+      <find>queryID</find>
     </findStrings>
     <replaceStrings>
       <replace>conn</replace>
@@ -128,13 +187,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/ClaimsEntity/GeneralClaimData.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/ClaimsEntity/ClaimPlanCode.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/ClaimsEntity/ClaimPolicy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/ClaimsEntity/PolicyAgent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/ClaimsEntity/ClientInterface.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/ClaimsEntity/ClientData.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/ClaimsEntity/CreditLifeObject.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/ClaimsEntity/ClaimActionEnum.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/ClaimsEntity/SystemsEnum.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/processing/Config.java" />
@@ -151,19 +203,14 @@
         <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/ClaimsEntity/ClaimIntegrator.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/repo/CrlGeneral1cRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/utils/ClaimSystemLink.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/repo/CrlPaymentRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/CrlPayment.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/repo/CrlGeneralBankRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/CrlGeneralBank.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/utils/DbEnvData.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crs/CrsfClm.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crs/CrsfPol.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/repo/CrsfPolRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/ClaimAction/CrlClaimOpen.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/parts/common.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/service/config/MvcConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/service/config/EncriptionConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/Person.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/repo/PersonRepo.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/service/PersonSevice.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/Role.java" />
@@ -173,12 +220,24 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/controllers/MyAccessDeniedHandler.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/greeting.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/service/config/WebSecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/parts/security.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/controllers/MainController.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/Languages.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/repo/LanguagesRepo.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/controllers/LanguagesСontroller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/CrlGeneralBank.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/languages.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/parts/lang/actionForm.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/repo/CrlPaymentRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/clients.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/ClaimAction/CrlClaimOpen.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/Person.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/service/config/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/CrlPayment.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/parts/lang/langList.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/controllers/ClaimСontroller.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ua/metlife/claims/simplecs/controllers/ClaimСontrollerTest.java" />
       </list>
     </option>
   </component>
@@ -214,11 +273,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="32767" />
-    <option name="y" value="32767" />
-    <option name="width" value="1940" />
-    <option name="height" value="1220" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1216" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -229,68 +288,6 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="simplecs" type="58d84e3e:PackageViewProjectNode" />
-              <item name="simplecs" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="simplecs" type="58d84e3e:PackageViewProjectNode" />
-              <item name="simplecs" type="616d4139:PackageViewModuleNode" />
-              <item name="ua.metlife.claims.simplecs" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="simplecs" type="58d84e3e:PackageViewProjectNode" />
-              <item name="simplecs" type="616d4139:PackageViewModuleNode" />
-              <item name="ua.metlife.claims.simplecs" type="1f31426a:PackageElementNode" />
-              <item name="controllers" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="simplecs" type="58d84e3e:PackageViewProjectNode" />
-              <item name="simplecs" type="616d4139:PackageViewModuleNode" />
-              <item name="ua.metlife.claims.simplecs" type="1f31426a:PackageElementNode" />
-              <item name="entity" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="simplecs" type="58d84e3e:PackageViewProjectNode" />
-              <item name="simplecs" type="616d4139:PackageViewModuleNode" />
-              <item name="ua.metlife.claims.simplecs" type="1f31426a:PackageElementNode" />
-              <item name="entity" type="1f31426a:PackageElementNode" />
-              <item name="crl" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="simplecs" type="58d84e3e:PackageViewProjectNode" />
-              <item name="simplecs" type="616d4139:PackageViewModuleNode" />
-              <item name="ua.metlife.claims.simplecs" type="1f31426a:PackageElementNode" />
-              <item name="entity" type="1f31426a:PackageElementNode" />
-              <item name="crs" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="simplecs" type="58d84e3e:PackageViewProjectNode" />
-              <item name="simplecs" type="616d4139:PackageViewModuleNode" />
-              <item name="ua.metlife.claims.simplecs" type="1f31426a:PackageElementNode" />
-              <item name="entity" type="1f31426a:PackageElementNode" />
-              <item name="csr" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="simplecs" type="58d84e3e:PackageViewProjectNode" />
-              <item name="simplecs" type="616d4139:PackageViewModuleNode" />
-              <item name="ua.metlife.claims.simplecs" type="1f31426a:PackageElementNode" />
-              <item name="repo" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="simplecs" type="58d84e3e:PackageViewProjectNode" />
-              <item name="simplecs" type="616d4139:PackageViewModuleNode" />
-              <item name="ua.metlife.claims.simplecs" type="1f31426a:PackageElementNode" />
-              <item name="utils" type="1f31426a:PackageElementNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -357,17 +354,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="simplecs" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="simplecs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="simplecs" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="simplecs" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-              <item name="crl" type="462c0819:PsiDirectoryNode" />
+              <item name="processing" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="simplecs" type="b2602c69:ProjectViewProjectNode" />
@@ -402,7 +389,24 @@
               <item name="simplecs" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="simplecs" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simplecs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simplecs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simplecs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simplecs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="simplecs" type="b2602c69:ProjectViewProjectNode" />
@@ -444,6 +448,36 @@
             <path>
               <item name="simplecs" type="b2602c69:ProjectViewProjectNode" />
               <item name="simplecs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simplecs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simplecs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simplecs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simplecs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="simplecs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simplecs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simplecs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="simplecs" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simplecs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simplecs" type="462c0819:PsiDirectoryNode" />
               <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -454,12 +488,76 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="simplecs" type="58d84e3e:PackageViewProjectNode" />
+              <item name="simplecs" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="simplecs" type="58d84e3e:PackageViewProjectNode" />
+              <item name="simplecs" type="616d4139:PackageViewModuleNode" />
+              <item name="ua.metlife.claims.simplecs" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="simplecs" type="58d84e3e:PackageViewProjectNode" />
+              <item name="simplecs" type="616d4139:PackageViewModuleNode" />
+              <item name="ua.metlife.claims.simplecs" type="1f31426a:PackageElementNode" />
+              <item name="controllers" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="simplecs" type="58d84e3e:PackageViewProjectNode" />
+              <item name="simplecs" type="616d4139:PackageViewModuleNode" />
+              <item name="ua.metlife.claims.simplecs" type="1f31426a:PackageElementNode" />
+              <item name="entity" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="simplecs" type="58d84e3e:PackageViewProjectNode" />
+              <item name="simplecs" type="616d4139:PackageViewModuleNode" />
+              <item name="ua.metlife.claims.simplecs" type="1f31426a:PackageElementNode" />
+              <item name="entity" type="1f31426a:PackageElementNode" />
+              <item name="crl" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="simplecs" type="58d84e3e:PackageViewProjectNode" />
+              <item name="simplecs" type="616d4139:PackageViewModuleNode" />
+              <item name="ua.metlife.claims.simplecs" type="1f31426a:PackageElementNode" />
+              <item name="entity" type="1f31426a:PackageElementNode" />
+              <item name="crs" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="simplecs" type="58d84e3e:PackageViewProjectNode" />
+              <item name="simplecs" type="616d4139:PackageViewModuleNode" />
+              <item name="ua.metlife.claims.simplecs" type="1f31426a:PackageElementNode" />
+              <item name="entity" type="1f31426a:PackageElementNode" />
+              <item name="csr" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="simplecs" type="58d84e3e:PackageViewProjectNode" />
+              <item name="simplecs" type="616d4139:PackageViewModuleNode" />
+              <item name="ua.metlife.claims.simplecs" type="1f31426a:PackageElementNode" />
+              <item name="repo" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="simplecs" type="58d84e3e:PackageViewProjectNode" />
+              <item name="simplecs" type="616d4139:PackageViewModuleNode" />
+              <item name="ua.metlife.claims.simplecs" type="1f31426a:PackageElementNode" />
+              <item name="utils" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="last_opened_file_path" value="E:/__R/sweater" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -468,12 +566,15 @@
     <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\ClaimsEntity" />
-      <recent name="E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\processing" />
-      <recent name="E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\csr" />
-      <recent name="E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs" />
-      <recent name="E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crl" />
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="ua.metlife.claims.simplecs.controllers" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Met\Source code - Copy\simplecs\src\main\resources" />
+      <recent name="E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\repo" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ua.metlife.claims.simplecs.repo" />
@@ -482,9 +583,12 @@
       <recent name="ua.metlife.claims.simplecs.ClaimAction" />
       <recent name="ua.metlife.claims.simplecs.processing" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Met\Source code - Copy\simplecs\src\main\resources" />
-      <recent name="E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\repo" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\ClaimsEntity" />
+      <recent name="E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\processing" />
+      <recent name="E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\csr" />
+      <recent name="E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs" />
+      <recent name="E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crl" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -499,7 +603,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="JUnit.ClaimСontrollerTest.getList">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <envs>
         <env name="DB.USER" value="root" />
@@ -518,6 +622,29 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="ClaimСontrollerTest.getList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="simplecs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ua.metlife.claims.simplecs.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ua.metlife.claims.simplecs.controllers" />
+      <option name="MAIN_CLASS_NAME" value="ua.metlife.claims.simplecs.controllers.ClaimСontrollerTest" />
+      <option name="METHOD_NAME" value="getList" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -564,9 +691,11 @@
     <list>
       <item itemvalue="Spring Boot.App" />
       <item itemvalue="Application.App" />
+      <item itemvalue="JUnit.ClaimСontrollerTest.getList" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ClaimСontrollerTest.getList" />
         <item itemvalue="Application.App" />
         <item itemvalue="Application.App" />
       </list>
@@ -605,20 +734,38 @@
       <workItem from="1630990631448" duration="11983000" />
       <workItem from="1631508730107" duration="24683000" />
       <workItem from="1631597492482" duration="7351000" />
+      <workItem from="1631685912164" duration="105000" />
+      <workItem from="1631686025649" duration="20000" />
+      <workItem from="1631686077137" duration="5368000" />
+      <workItem from="1631770673833" duration="12318000" />
+      <workItem from="1631859281646" duration="2918000" />
+      <workItem from="1632115857380" duration="3995000" />
+      <workItem from="1632291667030" duration="1386000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="ClaimСontrollerTest_getList - 2021.09.20 at 09h 28m 20s.xml">
+      <configuration name="ClaimСontrollerTest.getList" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ClaimСontrollerTest_getList - 2021.09.20 at 09h 28m 39s.xml">
+      <configuration name="ClaimСontrollerTest.getList" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ClaimСontrollerTest_getList - 2021.09.20 at 09h 28m 58s.xml">
+      <configuration name="ClaimСontrollerTest.getList" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140343000" />
+    <option name="totallyTimeSpent" value="166453000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="32767" y="32767" width="1940" height="1220" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="PlantUML" order="3" />
       <window_info anchor="right" id="Palette" order="9" />
       <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="4" visible="true" weight="0.1" />
+      <window_info anchor="right" id="Maven Projects" order="4" visible="true" weight="0.10021322" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Designer" order="2" />
@@ -627,18 +774,17 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3983364" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39788055" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.3283859" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.32851636" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.32851636" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.37847868" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.37764934" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32851636" />
-      <window_info content_ui="combo" x="660" y="276" width="599" height="647" id="Project" order="0" visible="true" weight="0.31861702" />
+      <window_info active="true" content_ui="combo" x="660" y="276" width="599" height="647" id="Project" order="0" visible="true" weight="0.3379531" />
       <window_info anchor="right" id="Bean Validation" order="10" />
       <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -647,6 +793,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.32755297" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
@@ -666,7 +813,7 @@
           <log-expression expression="        try {&#10;            csObject.setCsPolNo(nextPolNoForGmdClaims());&#10;            PreparedStatement stmt = GlobalConnection.getSqlConnection().prepareStatement(sql);&#10;            stmt.setString(1, csObject.getCsPolNo());&#10;            stmt.setString(2, Convert.checkString(csObject.getcObject().getCompanyShortNameLocal().trim().length() == 0 ? csObject.getcObject().getCompanyNameUa() : csObject.getcObject().getCompanyShortNameLocal(), 30));&#10;            stmt.setString(3, Convert.checkString(csObject.getInsObject().getDob(), 8));&#10;            stmt.setString(4, Convert.checkString(csObject.getCnObject().getIssueDate(), 8));&#10;            stmt.setString(5, Convert.checkString(csObject.getCnObject().getMaturityDate(), 8));&#10;            stmt.setString(6, Convert.checkString(csObject.getDeathStatus().equals(&quot;death&quot;) ? &quot;10&quot; : &quot;20&quot;, 2));&#10;            stmt.setString(7, &quot;&quot;);&#10;            stmt.setBigDecimal(8, new BigDecimal(&quot;0.00&quot;));&#10;            stmt.setBigDecimal(9, new BigDecimal(&quot;0.00&quot;));&#10;            stmt.setBigDecimal(10, new BigDecimal(&quot;0.00&quot;));&#10;            stmt.setString(11, &quot;&quot;);&#10;            stmt.setString(12, &quot;&quot;);&#10;            stmt.setString(13, &quot;&quot;);&#10;            stmt.setString(14, &quot;&quot;);&#10;            stmt.setString(15, GlobalConnection.getOlassLogin().toUpperCase());&#10;            stmt.setString(16, DateTools.getDateNowYmd());&#10;&#10;            stmt.executeUpdate();&#10;            stmt.close();&#10;            return true;&#10;        } catch (SQLException ex) {&#10;            System.err.println(&quot;SQLException: &quot; + ex.getMessage());&#10;            System.err.println(&quot;SQL list&gt;: &quot; + sql);&#10;        }&#10;        return false;&#10;    }   " language="JAVA" />
           <properties />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
+        <line-breakpoint type="java-method">
           <url>jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.28/tomcat-embed-core-8.5.28.jar!/org/apache/catalina/core/ApplicationFilterChain.class</url>
           <line>76</line>
           <properties class="org.apache.catalina.core.ApplicationFilterChain" method="internalDoFilter">
@@ -675,7 +822,10 @@
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="4" />
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="5" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -714,260 +864,15 @@
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>crlGeneralBank.</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/repo/PersonRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="55" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="108" column="13" lean-forward="true" selection-start-line="108" selection-start-column="13" selection-end-line="108" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.0.3.RELEASE/spring-security-core-5.0.3.RELEASE.jar!/org/springframework/security/core/userdetails/UserDetailsService.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#556#557#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/sw/loadwords.ftl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/lang/langList.ftl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/greeting.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/lang/actionForm.ftl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/web-forms.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7939">
-          <caret line="467" column="22" selection-start-line="467" selection-start-column="22" selection-end-line="467" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/ClaimAction/CrlClaimOpen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="120" column="59" selection-start-line="120" selection-start-column="59" selection-end-line="120" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/controllers/MyAccessDeniedHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/service/config/EncriptionConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.0.3.RELEASE/spring-security-core-5.0.3.RELEASE.jar!/org/springframework/security/crypto/password/PasswordEncoder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/service/config/WebSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-123">
-          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/service/PersonSevice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-289">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/security.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/login.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="8" selection-start-column="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/common.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="19" selection-start-column="19" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/Languages.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/service/config/MvcConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/languages.ftl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/repo/LanguagesRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/controllers/LanguagesСontroller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.4.RELEASE/spring-web-5.0.4.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.4.RELEASE/spring-webmvc-5.0.4.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.4.RELEASE/spring-webmvc-5.0.4.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="495" selection-start-line="495" selection-end-line="495" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.4.RELEASE/spring-webmvc-5.0.4.RELEASE.jar!/org/springframework/web/servlet/mvc/method/AbstractHandlerMethodAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.4.RELEASE/spring-webmvc-5.0.4.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="430" selection-start-line="430" selection-end-line="430" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.4.RELEASE/spring-webmvc-5.0.4.RELEASE.jar!/org/springframework/web/servlet/FrameworkServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="422" selection-start-line="422" selection-end-line="422" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-websocket/8.5.28/tomcat-embed-websocket-8.5.28.jar!/org/apache/tomcat/websocket/server/WsFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.0.3.RELEASE/spring-security-web-5.0.3.RELEASE.jar!/org/springframework/security/web/access/intercept/FilterSecurityInterceptor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.0.3.RELEASE/spring-security-web-5.0.3.RELEASE.jar!/org/springframework/security/web/access/ExceptionTranslationFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="90" selection-start-line="90" selection-end-line="90" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.0.3.RELEASE/spring-security-web-5.0.3.RELEASE.jar!/org/springframework/security/web/session/SessionManagementFilter.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
@@ -1066,20 +971,253 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/controllers/MainController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/service/config/a88.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/ClaimAction/CrsInit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="204">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/ClaimAction/AddNewClaim.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.28/tomcat-embed-core-8.5.28.jar!/org/apache/catalina/core/ApplicationFilterChain.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="76" column="122" selection-start-line="76" selection-start-column="122" selection-end-line="76" selection-end-column="122" />
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/utils/processing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/repo/CrsfPolRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/repo/CrlGeneral1cRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="70" selection-start-line="7" selection-start-column="70" selection-end-line="7" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/CrlGeneralBank.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.0.0.RELEASE/spring-boot-autoconfigure-2.0.0.RELEASE.jar!/org/springframework/boot/autoconfigure/data/web/SpringDataWebProperties.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="40" column="24" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/Languages.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/repo/CrsfClmRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/CrlGeneral1c.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="52" column="25" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/service/config/MvcConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/login.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" selection-start-column="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/ClaimAction/ClaimOpen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="106" column="23" selection-start-line="106" selection-start-column="23" selection-end-line="106" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/clients.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/lang/actionForm.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="36" selection-start-column="36" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/sw/filechoser.ftl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/sw/loadwords.ftl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/sw/textarea.ftl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/common.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/repo/PersonRepo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="52" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/service/config/WebSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="30" column="143" selection-start-line="30" selection-start-column="143" selection-end-line="30" selection-end-column="143" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/controllers/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="564">
+          <caret line="64" column="40" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/repo/CrlPaymentRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="71" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/processing/Convert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4437">
+          <caret line="270" column="25" selection-start-line="270" selection-start-column="25" selection-end-line="270" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/processing/DateTools.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/lang/langList.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="94" selection-start-line="21" selection-start-column="94" selection-end-line="21" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/CrlPayment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1428">
+          <caret line="98" column="45" selection-start-line="98" selection-start-column="45" selection-end-line="98" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/controllers/ClaimСontroller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/Optional.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ua/metlife/claims/simplecs/controllers/ClaimСontrollerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/ClaimAction/CrlClaimOpen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

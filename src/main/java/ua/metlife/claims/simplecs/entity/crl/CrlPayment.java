@@ -6,12 +6,15 @@
 package ua.metlife.claims.simplecs.entity.crl;
 
 import lombok.Data;
+import ua.metlife.claims.simplecs.processing.Convert;
+import ua.metlife.claims.simplecs.processing.DateTools;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 /**
@@ -85,12 +88,24 @@ public class CrlPayment implements Serializable {
 //    @ManyToOne
 //    private CrlTariffPlan tpId;
 //
-//    @JoinColumn(name = "GENERAL_ID", referencedColumnName = "ID", insertable = false, updatable = false, nullable = true)
-//    @ManyToOne(optional = false)
-//    private CrlGeneral1c generalId;
-//
-//    @JoinColumn(name = "ID", referencedColumnName = "RELATED_1C_GEN_ID", insertable = false, updatable = false, nullable = true)
-//    @ManyToOne(optional = false)
-//    private CrlGeneralBank crlGeneralBank;
+    @JoinColumn(name = "GENERAL_ID", referencedColumnName = "ID", insertable = false, updatable = false, nullable = true)
+    @ManyToOne(optional = false)
+    private CrlGeneral1c generalId;
+
+    @JoinColumn(name = "GENERAL_ID", referencedColumnName = "RELATED_1C_GEN_ID", insertable = false, updatable = false, nullable = true)
+    @ManyToOne(optional = false)
+    private CrlGeneralBank crlGeneralBank;
+
+    public String getFormatedData(String date) {
+        if (date == null) {
+            return "";
+        }
+
+        String DATE_FORMAT_UA = "dd.MM.yyyy";
+        String DATE_FORMAT_BASE = "yyyyMMdd";
+
+        return Convert.stringToDateFormatString(DATE_FORMAT_BASE, DATE_FORMAT_UA, date);
+
+    }
 
 }

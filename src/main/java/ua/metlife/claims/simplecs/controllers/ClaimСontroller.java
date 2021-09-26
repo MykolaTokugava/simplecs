@@ -1,38 +1,51 @@
 package ua.metlife.claims.simplecs.controllers;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import ua.metlife.claims.simplecs.ClaimAction.CrlClaimOpen;
+import ua.metlife.claims.simplecs.entity.crl.CrlPayment;
 import ua.metlife.claims.simplecs.entity.crl.Languages;
+import ua.metlife.claims.simplecs.repo.CrlPaymentRepository;
 import ua.metlife.claims.simplecs.repo.LanguagesRepo;
+import ua.metlife.claims.simplecs.utils.DbEnvData;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
 
-@RequestMapping("/languages")
+@Slf4j
+@RequestMapping("/clients")
 @Controller
-public class LanguagesСontroller {
+public class ClaimСontroller {
 
     @Autowired
-    private LanguagesRepo languagesRepo;
+    private CrlPaymentRepository crlPaymentRepository;
 
+    @Autowired
+    CrlClaimOpen crlClaimOpen;
+
+    @Autowired // This means to get the bean called userRepository
+    private DbEnvData dbEnvData;
 
     @GetMapping
     public String getList(Model model) {
-        //model.addAttribute("languages", languagesRepo.findAll());
-        model.addAttribute("languages", new ArrayList());
+        model.addAttribute("clients", crlPaymentRepository.findTop20ByOrderByIdDesc());
+        List<CrlPayment> list = crlPaymentRepository.findTop20ByOrderByIdDesc();
         model.addAttribute("isLangList", true);
         model.addAttribute("isAddLang", false);
         model.addAttribute("action", "add");
-        return "/languages";
+        return "/clients";
     }
 
     @GetMapping("{id}")
     public String getOne(@PathVariable("id") Languages languages, Model model) {
         System.out.println("code: " + languages.getCode());
         model.addAttribute("code", languages.getCode());
-        languagesRepo.findAll().forEach(n -> System.out.println("language: " + n.getName()));
-        return "/languages";
+       // languagesRepo.findAll().forEach(n -> System.out.println("language: " + n.getName()));
+        return "/clients";
     }
 
     @GetMapping("add")
@@ -42,7 +55,7 @@ public class LanguagesСontroller {
         model.addAttribute("isAddLang", true);
         model.addAttribute("isLangList", false);
         model.addAttribute("action", "add");
-        return "/languages";
+        return "/clients";
     }
 
     @PostMapping("add")
@@ -51,7 +64,7 @@ public class LanguagesСontroller {
             @RequestParam String code
             ) {
 
-        Languages langFromDb = languagesRepo.findByCode(code.trim().toUpperCase());
+        Languages langFromDb = null;//languagesRepo.findByCode(code.trim().toUpperCase());
 
         System.out.println("code = " + code);
         System.out.println("name = " + name);
@@ -61,10 +74,10 @@ public class LanguagesСontroller {
             item.setCode(code.trim().toUpperCase());
             item.setName(name);
 
-            languagesRepo.save(item);
+            //languagesRepo.save(item);
         }
 
-        return "redirect:/languages";
+        return "redirect:/clients";
     }
 
 
@@ -72,9 +85,9 @@ public class LanguagesСontroller {
     public String unsubscribe(
             @PathVariable("id") Languages languages, Model model
     ) {
-        languagesRepo.delete(languages);
+        //languagesRepo.delete(languages);
 
-        return "redirect:/languages";
+        return "redirect:/clients";
     }
 
     @GetMapping("edit/{id}")
@@ -97,7 +110,7 @@ public class LanguagesСontroller {
             System.err.println("unknouwn Language ID" );
         }
 
-        return "/languages";
+        return "/clients";
     }
 
 
@@ -111,16 +124,24 @@ public class LanguagesСontroller {
         if (languages != null) {
             languages.setName(name.trim());
             languages.setCode(code.trim().toUpperCase());
-            languagesRepo.save(languages);
+            //languagesRepo.save(languages);
         }
             model.addAttribute("isAddLang", false);
             model.addAttribute("isLangList", true);
 
-        return "redirect:/languages";
+        return "redirect:/clients";
     }
 
 
-
+    @GetMapping("addclaim/{id}")
+    public String addclaim(
+            @PathVariable("id") CrlPayment crlPayment, Model model
+    ) {
+        log.info("Prepared for add claim for id: " + crlPayment.getId());
+        crlClaimOpen.claimOpen(dbEnvData.getEntityManager(), crlPayment.getId());
+        log.info("Claim added for id: " + crlPayment.getId());
+        return "redirect:/clients";
+    }
 
 
 }

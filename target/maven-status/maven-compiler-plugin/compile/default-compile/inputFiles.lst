@@ -36,6 +36,7 @@ E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crl\CrlPolicy
 E:\Met\_R\simplecs\src\main\java\com\ibm\as400\access\CustomAs400JDBCConnection.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\ClmAgt.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\ClaimsEntity\ClaimPlanCode.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\controllers\ClaimСontroller.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfPolPk.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\repo\CrsfPolRepository.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\ClaimsEntity\ClientInterface.java
@@ -51,6 +52,7 @@ E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\controllers\MyAccess
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfClmPk.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\repo\CsSystemRepository.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfSet.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\repo\LanguagesRepo.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\utils\ClaimsUtils.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\service\config\MvcConfig.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\utils\processing.java
@@ -62,6 +64,7 @@ E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\App.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\repo\CsSystemTransaction.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\service\config\EncriptionConfig.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crl\CrlTpCoef.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crl\Languages.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\utils\ClaimSystemLink.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfDclPk.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfPol.java

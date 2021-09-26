@@ -1,21 +1,28 @@
 <table class="table table-striped">
     <thead class="thead-light">
     <tr>
-        <th scope="col">#</th>
+        <th scope="col">ID</th>
         <th scope="col">Name</th>
-        <th scope="col">Code</th>
+        <th scope="col">Taxcode</th>
+        <th scope="col">Paid: From-To</th>
+        <th scope="col">Tariff</th>
+        <th scope="col">Status</th>
         <th scope="col">Action</th>
     </tr>
     </thead>
     <tbody>
     <#assign count = 0>
-    <#list languages as lang>
+    <#list clients as client>
         <#assign count = count + 1>
     <tr>
-        <th scope="row">${count}</th>
-        <td>${lang.name}</td>
-        <td>${lang.code}</td>
-        <td><a class="btn btn-info" href="/languages/edit/${lang.id}"/>Edit</a>&nbsp;<a class="btn btn-info" href="/languages/delete/${lang.id}"/>Delete</a></td>
+        <!--<th scope="row">${count}</th>-->
+        <td>${client.id}</td>
+        <td>${client.generalId.customerFullName}</td>
+        <td>${client.generalId.taxcode}</td>
+        <td>${client.getFormatedData(client.paidFrom)}-${client.getFormatedData(client.paidTo)}</td>
+        <td>Tariff</td>
+        <td>${client.generalId.claim}</td>
+        <td><a class="btn btn-info" href="/clients/addclaim/${client.id}"/>Add Claim</a>&nbsp;<a class="btn btn-info" href="/clients/openclaim/${client.id}"/>Open Claim</a>&nbsp;<a class="btn btn-info" href="/clients/declineclaim/${client.id}"/>Decline</a></td>
 
     </tr>
     </#list>

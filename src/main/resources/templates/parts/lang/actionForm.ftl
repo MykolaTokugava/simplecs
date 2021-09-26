@@ -1,4 +1,4 @@
-<form method="post" action="/languages/${action}">
+<form method="post" action="/clients/${action}">
     <div class="form-group row">
         <label class="col-sm-2 col-form-label">Name:</label>
         <div class="col-sm-6">

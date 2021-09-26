@@ -2,6 +2,8 @@ package ua.metlife.claims.simplecs.ClaimAction;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Component;
 import ua.metlife.claims.simplecs.ClaimsEntity.ClaimIntegrator;
 import ua.metlife.claims.simplecs.entity.crl.CrlGeneral1c;
@@ -10,12 +12,11 @@ import ua.metlife.claims.simplecs.entity.crl.CrlPayment;
 import ua.metlife.claims.simplecs.entity.crs.CrsfPol;
 import ua.metlife.claims.simplecs.processing.Config;
 import ua.metlife.claims.simplecs.processing.DateTools;
-import ua.metlife.claims.simplecs.repo.CrlGeneral1cRepository;
-import ua.metlife.claims.simplecs.repo.CrlGeneralBankRepository;
 import ua.metlife.claims.simplecs.repo.CrlPaymentRepository;
 import ua.metlife.claims.simplecs.repo.CrsfPolRepository;
 import ua.metlife.claims.simplecs.utils.ClaimSystemLink;
 import ua.metlife.claims.simplecs.utils.ConnectionFromJpa;
+
 import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
 import java.math.BigDecimal;
@@ -29,11 +30,11 @@ public class CrlClaimOpen {
     @Autowired
     private CrlPaymentRepository crlPaymentRepository;
 
-    @Autowired
-    CrlGeneral1cRepository crlGeneral1cRepository;
-
-    @Autowired
-    CrlGeneralBankRepository crlGeneralBankRepository;
+//    @Autowired
+//    CrlGeneral1cRepository crlGeneral1cRepository;
+//
+//    @Autowired
+//    CrlGeneralBankRepository crlGeneralBankRepository;
 
     @Autowired
     CrsfPolRepository crsfPolRepository;
@@ -71,6 +72,9 @@ public class CrlClaimOpen {
             log.info("queryID is null");
             crlPayment = crlPaymentRepository.findTopByOrderByIdDesc();
         }
+
+        log.info("search size = " + crlPaymentRepository.findByGeneralIdCustomerFullName("Mamed John Petrovich").size());
+
         if (crlPayment!=null) {
             log.info("crlPayment ID: " + crlPayment.getId());
             log.info("paidFrom: " + crlPayment.getPaidFrom());
@@ -80,7 +84,8 @@ public class CrlClaimOpen {
             log.error("crlPayment is Null for ID: " + id);
             return;
         }
-        CrlGeneral1c crlGeneral1c = crlGeneral1cRepository.findById(crlPayment.getGeneral_Id()).get();
+        //CrlGeneral1c crlGeneral1c = crlGeneral1cRepository.findById(crlPayment.getGeneral_Id()).get();
+        CrlGeneral1c crlGeneral1c = crlPayment.getGeneralId();
 
         if (crlGeneral1c!=null) {
             log.info("crlGeneral1c ID: " + crlGeneral1c.getId());
@@ -89,7 +94,8 @@ public class CrlClaimOpen {
             return;
         }
 
-        CrlGeneralBank crlGeneralBank = crlGeneralBankRepository.findByRelated1cGenIdData(crlPayment.getGeneral_Id());
+        //CrlGeneralBank crlGeneralBank = crlGeneralBankRepository.findByRelated1cGenIdData(crlPayment.getGeneral_Id());
+        CrlGeneralBank crlGeneralBank = crlPayment.getCrlGeneralBank();
 
         if (crlGeneralBank!=null) {
             log.info("crlGeneralBank ID: " + crlGeneralBank.getId());
@@ -102,8 +108,9 @@ public class CrlClaimOpen {
         log.info("polNumber: " +polNumber);
         log.info("Insured Name: " +crlGeneral1c.getCustomerFullName());
         log.info("Insured DOB: " +crlGeneral1c.getCustomerDateOfBirth());
-        log.info("Insured passport: " +crlGeneralBank.getInsurantPassport());
-        log.info("PremiumCalculated: " +crlPayment.getPremiumCalculated());
+        log.info("Insured passport: " + crlGeneralBank.getInsurantPassport());
+        log.info("PremiumCalculated: " + crlPayment.getPremiumCalculated());
+        log.info("OWNER_LOGIN(): " + Config.getOWNER_LOGIN());
 
 
         CrsfPol itemPol = new CrsfPol();
@@ -117,7 +124,7 @@ public class CrlClaimOpen {
         itemPol.setBnkasgn("N");
         itemPol.setIname(crlGeneral1c.getCustomerFullName());
         itemPol.setIbthd(crlGeneral1c.getCustomerDateOfBirth());
-        itemPol.setIidno(crlGeneralBank.getInsurantPassport());
+        itemPol.setIidno(crlGeneralBank.getInsurantPassport()==null ? "" : crlGeneralBank.getInsurantPassport());
         itemPol.setOname(crlGeneral1c.getCustomerFullName());
         itemPol.setObthd(crlGeneral1c.getCustomerDateOfBirth());
         itemPol.setCpyfr("O");
@@ -169,6 +176,13 @@ public class CrlClaimOpen {
 //        }
 
         crsfPolRepository.save(itemPol);
+
+        crlPayment.getGeneralId().setClaim(1);
+        crlPayment.getGeneralId().setClaimDate(DateTools.getDateNowYmd());
+
+        crlPaymentRepository.save(crlPayment);
+
+
         log.info("Claim added...");
 
 
