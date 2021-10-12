@@ -2,17 +2,17 @@ package ua.metlife.claims.simplecs.ClaimAction;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Component;
 import ua.metlife.claims.simplecs.ClaimsEntity.ClaimIntegrator;
 import ua.metlife.claims.simplecs.entity.crl.CrlGeneral1c;
 import ua.metlife.claims.simplecs.entity.crl.CrlGeneralBank;
 import ua.metlife.claims.simplecs.entity.crl.CrlPayment;
+import ua.metlife.claims.simplecs.entity.crs.CrsfClm;
 import ua.metlife.claims.simplecs.entity.crs.CrsfPol;
 import ua.metlife.claims.simplecs.processing.Config;
 import ua.metlife.claims.simplecs.processing.DateTools;
 import ua.metlife.claims.simplecs.repo.CrlPaymentRepository;
+import ua.metlife.claims.simplecs.repo.CrsfClmRepository;
 import ua.metlife.claims.simplecs.repo.CrsfPolRepository;
 import ua.metlife.claims.simplecs.utils.ClaimSystemLink;
 import ua.metlife.claims.simplecs.utils.ConnectionFromJpa;
@@ -30,6 +30,9 @@ public class CrlClaimOpen {
     @Autowired
     private CrlPaymentRepository crlPaymentRepository;
 
+    @Autowired
+    private CrsfClmRepository crsfClmRepository;
+
 //    @Autowired
 //    CrlGeneral1cRepository crlGeneral1cRepository;
 //
@@ -43,7 +46,7 @@ public class CrlClaimOpen {
     0. Вычитываем данные о клиенте из crl_general_1c
     1. Проверяем наличие у клиента номера полиса (таблица  cs_id_link -> C_POLICY_ID || C_TAXCODE)- >
     если нет присваиваем через nextClaimNumberForClaim и записываем CRSFCRP (from CRSFCLM -> CLMNO) C.yearxxxxxxx
-    2. Записываем информацию в CRSFPOL
+    2. Записываем информацию в CRSFPOL + CrsfClm
 
     CLMNO " 21.xxxx"
     POLNO "C21.xxxx"
@@ -112,12 +115,14 @@ public class CrlClaimOpen {
         log.info("PremiumCalculated: " + crlPayment.getPremiumCalculated());
         log.info("OWNER_LOGIN(): " + Config.getOWNER_LOGIN());
 
+        String claimStatus = "U";
+        String claimDeathStatus = "N";
 
         CrsfPol itemPol = new CrsfPol();
         itemPol.setClmno(clmNumber);
         itemPol.setPolno(polNumber);
         itemPol.setCrfid("P");
-        itemPol.setStat("U");
+        itemPol.setStat(claimStatus);
         itemPol.setStatdte(DateTools.getDateNowYmd());
         itemPol.setFaok("N");
         itemPol.setRaok("N");
@@ -176,16 +181,73 @@ public class CrlClaimOpen {
 //        }
 
         crsfPolRepository.save(itemPol);
+        log.info("Claim added to CrsfPol...");
 
         crlPayment.getGeneralId().setClaim(1);
         crlPayment.getGeneralId().setClaimDate(DateTools.getDateNowYmd());
 
         crlPaymentRepository.save(crlPayment);
+        log.info("Claim status updated in CrlPayment...");
 
 
-        log.info("Claim added...");
+        String address = crlGeneralBank.getCustomerAddress()==null ? "" : crlGeneralBank.getCustomerAddress();
+        if (address.length()>30) address = address.substring(0,29);
+
+        //-------------------------------------------
+        CrsfClm crsfClm = new CrsfClm();
+        crsfClm.setClmno(clmNumber);
+        crsfClm.setCrfid("C");
+        crsfClm.setClmon("");
+        crsfClm.setStat(claimStatus);
+        crsfClm.setStatdte(DateTools.getDateNowYmd());
+        crsfClm.setChck("N");
+        crsfClm.setFaok("Y");
+        crsfClm.setPaok("Y");
+        crsfClm.setCateg("");
+        crsfClm.setDeath(claimDeathStatus);
+        crsfClm.setCause("");
+        crsfClm.setEvent("");
+        crsfClm.setIname(crlGeneral1c.getCustomerFullName());
+        crsfClm.setIbthd(crlGeneral1c.getCustomerDateOfBirth());
+        crsfClm.setIidno(crlGeneralBank.getInsurantPassport()==null ? "" : crlGeneralBank.getInsurantPassport());
+        crsfClm.setIadr1(address);
+        crsfClm.setIadr2("");
+        crsfClm.setIzip("");
+        crsfClm.setIcity("");
+        crsfClm.setEvtdt(crlGeneral1c.getClaimDate()==null ? "" : crlGeneral1c.getClaimDate());
+        crsfClm.setNtfdt("");
+        crsfClm.setEntdt(DateTools.getDateNowYmd());
+        crsfClm.setCovamt(crlPayment.getAmount()==null ? BigDecimal.ZERO : crlPayment.getAmount());
+        crsfClm.setResamt(crlPayment.getPremiumCalculated()==null ? BigDecimal.ZERO : crlPayment.getPremiumCalculated());
+        crsfClm.setBftamt(new BigDecimal("0.00"));
+        crsfClm.setBfttot(new BigDecimal("0.00"));
+        crsfClm.setDclobj("");
+        crsfClm.setDclp2s(new BigDecimal("0.00"));
+        crsfClm.setHcllsqn("0001");
+        crsfClm.setSetlsqn("0001");
+        crsfClm.setFlwlsqn("0000");
+        crsfClm.setFmelsqn("0000");
+        crsfClm.setFlelsqn("0000");
+        crsfClm.setSetpaid("");
+        crsfClm.setSetpdte("");
+        crsfClm.setFmeamt(new BigDecimal("0.00"));
+        crsfClm.setFleamt(new BigDecimal("0.00"));
+        crsfClm.setRecusr(Config.getOWNER_LOGIN());
+        crsfClm.setRecdte(DateTools.getDateNowYmd());
+        //----
+
+        crsfClmRepository.save(crsfClm);
+
+        log.info("Claim added to CrsfClm...");
 
 
+    }
+
+    public boolean addClaimToCrsfClm() {
+
+
+
+        return true;
     }
 
 //    @Transactional
