@@ -8,11 +8,13 @@ import ua.metlife.claims.simplecs.entity.crl.CrlGeneral1c;
 import ua.metlife.claims.simplecs.entity.crl.CrlGeneralBank;
 import ua.metlife.claims.simplecs.entity.crl.CrlPayment;
 import ua.metlife.claims.simplecs.entity.crs.CrsfClm;
+import ua.metlife.claims.simplecs.entity.crs.CrsfCrp;
 import ua.metlife.claims.simplecs.entity.crs.CrsfPol;
 import ua.metlife.claims.simplecs.processing.Config;
 import ua.metlife.claims.simplecs.processing.DateTools;
 import ua.metlife.claims.simplecs.repo.CrlPaymentRepository;
 import ua.metlife.claims.simplecs.repo.CrsfClmRepository;
+import ua.metlife.claims.simplecs.repo.CrsfCrpRepository;
 import ua.metlife.claims.simplecs.repo.CrsfPolRepository;
 import ua.metlife.claims.simplecs.utils.ClaimSystemLink;
 import ua.metlife.claims.simplecs.utils.ConnectionFromJpa;
@@ -33,14 +35,17 @@ public class CrlClaimOpen {
     @Autowired
     private CrsfClmRepository crsfClmRepository;
 
+    @Autowired
+    CrsfPolRepository crsfPolRepository;
+
+    @Autowired
+    private CrsfCrpRepository crsfCrpRepository;
+
 //    @Autowired
 //    CrlGeneral1cRepository crlGeneral1cRepository;
 //
 //    @Autowired
 //    CrlGeneralBankRepository crlGeneralBankRepository;
-
-    @Autowired
-    CrsfPolRepository crsfPolRepository;
 
     /*
     0. Вычитываем данные о клиенте из crl_general_1c
@@ -100,6 +105,9 @@ public class CrlClaimOpen {
         //CrlGeneralBank crlGeneralBank = crlGeneralBankRepository.findByRelated1cGenIdData(crlPayment.getGeneral_Id());
         CrlGeneralBank crlGeneralBank = crlPayment.getCrlGeneralBank();
 
+        String address = crlGeneralBank.getCustomerAddress()==null ? "" : crlGeneralBank.getCustomerAddress();
+        if (address.length()>30) address = address.substring(0,29);
+
         if (crlGeneralBank!=null) {
             log.info("crlGeneralBank ID: " + crlGeneralBank.getId());
         } else {
@@ -118,6 +126,26 @@ public class CrlClaimOpen {
         String claimStatus = "U";
         String claimDeathStatus = "N";
 
+        //add to CrsfCrp
+
+        CrsfCrp crsfCrp = new CrsfCrp();
+        crsfCrp.setPolno(polNumber);
+        crsfCrp.setAdrs1(address);
+        crsfCrp.setAdrs2("");
+        crsfCrp.setCity("");
+        crsfCrp.setEffdte(crlPayment.getPaidFrom()!=null ? crlPayment.getPaidFrom() : "");
+        crsfCrp.setMatdte(crlPayment.getPaidTo()!=null ? crlPayment.getPaidTo() : "");
+        crsfCrp.setOname(crlGeneral1c.getCustomerFullName());
+        crsfCrp.setPlob("10");
+        crsfCrp.setRecdte(DateTools.getDateNowYmd());
+        crsfCrp.setRecusr(Config.getOWNER_LOGIN());
+        crsfCrp.setZip("");
+
+        crsfCrpRepository.save(crsfCrp);
+        log.info("Claim added to CrsfCrp...");
+
+        //---
+
         CrsfPol itemPol = new CrsfPol();
         itemPol.setClmno(clmNumber);
         itemPol.setPolno(polNumber);
@@ -129,7 +157,7 @@ public class CrlClaimOpen {
         itemPol.setBnkasgn("N");
         itemPol.setIname(crlGeneral1c.getCustomerFullName());
         itemPol.setIbthd(crlGeneral1c.getCustomerDateOfBirth());
-        itemPol.setIidno(crlGeneralBank.getInsurantPassport()==null ? "" : crlGeneralBank.getInsurantPassport());
+        itemPol.setIidno(crlGeneralBank.getTaxcode()==null ? "" : crlGeneralBank.getTaxcode());//crlGeneralBank.getInsurantPassport()==null ? "" : crlGeneralBank.getInsurantPassport()
         itemPol.setOname(crlGeneral1c.getCustomerFullName());
         itemPol.setObthd(crlGeneral1c.getCustomerDateOfBirth());
         itemPol.setCpyfr("O");
@@ -144,7 +172,7 @@ public class CrlClaimOpen {
         itemPol.setAnnprm(new BigDecimal("0.00"));
         itemPol.setWcpprm(new BigDecimal("0.00"));
         itemPol.setCovamt(crlPayment.getAmount());
-        itemPol.setResamt(crlPayment.getPremiumCalculated());
+        itemPol.setResamt(BigDecimal.ZERO);//crlPayment.getPremiumCalculated()
         itemPol.setBftamt(new BigDecimal("0.00"));
         itemPol.setBfttot(new BigDecimal("0.00"));
         itemPol.setCcag1fc("");
@@ -190,10 +218,9 @@ public class CrlClaimOpen {
         log.info("Claim status updated in CrlPayment...");
 
 
-        String address = crlGeneralBank.getCustomerAddress()==null ? "" : crlGeneralBank.getCustomerAddress();
-        if (address.length()>30) address = address.substring(0,29);
+         //-------------------------------------------
+        //TAXCDE ?? / NOTIFY DATE / OCCURED DATE
 
-        //-------------------------------------------
         CrsfClm crsfClm = new CrsfClm();
         crsfClm.setClmno(clmNumber);
         crsfClm.setCrfid("C");
@@ -209,7 +236,7 @@ public class CrlClaimOpen {
         crsfClm.setEvent("");
         crsfClm.setIname(crlGeneral1c.getCustomerFullName());
         crsfClm.setIbthd(crlGeneral1c.getCustomerDateOfBirth());
-        crsfClm.setIidno(crlGeneralBank.getInsurantPassport()==null ? "" : crlGeneralBank.getInsurantPassport());
+        crsfClm.setIidno(crlGeneralBank.getTaxcode()==null ? "" : crlGeneralBank.getTaxcode());
         crsfClm.setIadr1(address);
         crsfClm.setIadr2("");
         crsfClm.setIzip("");
@@ -218,7 +245,7 @@ public class CrlClaimOpen {
         crsfClm.setNtfdt("");
         crsfClm.setEntdt(DateTools.getDateNowYmd());
         crsfClm.setCovamt(crlPayment.getAmount()==null ? BigDecimal.ZERO : crlPayment.getAmount());
-        crsfClm.setResamt(crlPayment.getPremiumCalculated()==null ? BigDecimal.ZERO : crlPayment.getPremiumCalculated());
+        crsfClm.setResamt(BigDecimal.ZERO); //crlPayment.getPremiumCalculated()==null ? BigDecimal.ZERO : crlPayment.getPremiumCalculated()
         crsfClm.setBftamt(new BigDecimal("0.00"));
         crsfClm.setBfttot(new BigDecimal("0.00"));
         crsfClm.setDclobj("");

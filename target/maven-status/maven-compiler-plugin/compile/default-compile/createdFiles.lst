@@ -54,10 +54,12 @@ ua\metlife\claims\simplecs\ClaimsEntity\GeneralClaimData.class
 ua\metlife\claims\simplecs\processing\Config.class
 ua\metlife\claims\simplecs\utils\ConnectionFromJpa$1.class
 ua\metlife\claims\simplecs\ClaimsEntity\ClaimPropertyObject.class
+ua\metlife\claims\simplecs\entity\crs\CrsfCrp.class
 ua\metlife\claims\simplecs\entity\crl\CrlPolicy.class
 ua\metlife\claims\simplecs\entity\crs\CrsfRsbHiPk.class
 ua\metlife\claims\simplecs\entity\crs\CrsfClm.class
 ua\metlife\claims\simplecs\service\config\EncriptionConfig.class
+ua\metlife\claims\simplecs\repo\CrsfCrpRepository.class
 ua\metlife\claims\simplecs\ClaimsEntity\ClaimPlanCode.class
 ua\metlife\claims\simplecs\ClaimsEntity\SystemsEnum.class
 ua\metlife\claims\simplecs\entity\csr\CsAccidents.class

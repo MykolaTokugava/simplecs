@@ -15,6 +15,7 @@ E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\ClaimsEntity\General
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfRsbPk.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\ClaimsEntity\ClaimPolicy.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\ClaimsEntity\ClientData.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfCrp.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsFpcd.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\ClaimsEntity\ClaimIntegrator.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\csr\CsIdLink.java
@@ -45,6 +46,7 @@ E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\ClaimAction\AddNewCl
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crl\CrlTariffPlan.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\CrsfRsbHi.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crl\CrlGeneralBank.java
+E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\repo\CrsfCrpRepository.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs\ClmCrmNigo.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\ClaimsEntity\PolicyAgent.java
 E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crl\CrlBankContract.java
