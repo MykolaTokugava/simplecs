@@ -107,6 +107,8 @@ public class ClaimSystemLink {
         } else {
             year = Integer.parseInt(String.valueOf(year.toString().substring(2, 4)));
         }
+
+
         String res = null;
         Integer counter = null;
         String sql = ""
@@ -116,7 +118,7 @@ public class ClaimSystemLink {
                 + "ORDER BY substr(CLMNO,5,10) DESC";
         try {
             PreparedStatement stmt = conn.prepareStatement(sql);
-            stmt.setInt(1, year);
+            stmt.setString(1, year.toString());
             ResultSet rs = stmt.executeQuery();
 
             while (rs.next()) {
@@ -149,7 +151,7 @@ public class ClaimSystemLink {
                 + "ORDER BY substr(POLNO,5,10) DESC";
         try {
             PreparedStatement stmt = conn.prepareStatement(sql);
-            stmt.setInt(1, year);
+            stmt.setString(1, year.toString());
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
                 counter = rs.getInt("LNC") + 1;
