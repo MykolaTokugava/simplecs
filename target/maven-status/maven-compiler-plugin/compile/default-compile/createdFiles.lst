@@ -81,7 +81,6 @@ ua\metlife\claims\simplecs\ClaimsEntity\ClientData.class
 ua\metlife\claims\simplecs\entity\crs\CrsfPol.class
 ua\metlife\claims\simplecs\utils\ConnectionFromJpa$MyWork.class
 ua\metlife\claims\simplecs\entity\crs\CrsfSrbHi.class
-com\ibm\as400\access\CustomAs400JDBCConnection.class
 ua\metlife\claims\simplecs\entity\crs\CrsfRsbPk.class
 ua\metlife\claims\simplecs\entity\crs\CrsfRsb.class
 ua\metlife\claims\simplecs\entity\crl\CrlBankContract.class

@@ -17,7 +17,7 @@
     <tr>
         <!--<th scope="row">${count}</th>-->
         <td>${client.id}</td>
-        <td>${client.generalId.customerFullName}</td>
+        <td><a href="/clients/clientview/${client.id}" target=_blank/>${client.generalId.customerFullName}</a></td>
         <td>${client.generalId.taxcode}</td>
         <td>${client.getFormatedData(client.paidFrom)}-${client.getFormatedData(client.paidTo)}</td>
         <td>Tariff</td>

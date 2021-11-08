@@ -9,12 +9,9 @@ import ua.metlife.claims.simplecs.ClaimAction.CrlClaimOpen;
 import ua.metlife.claims.simplecs.entity.crl.CrlPayment;
 import ua.metlife.claims.simplecs.entity.crl.Languages;
 import ua.metlife.claims.simplecs.repo.CrlPaymentRepository;
-import ua.metlife.claims.simplecs.repo.LanguagesRepo;
 import ua.metlife.claims.simplecs.utils.DbEnvData;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
 
 @Slf4j
 @RequestMapping("/clients")
@@ -44,7 +41,7 @@ public class ClaimСontroller {
     public String getOne(@PathVariable("id") Languages languages, Model model) {
         System.out.println("code: " + languages.getCode());
         model.addAttribute("code", languages.getCode());
-       // languagesRepo.findAll().forEach(n -> System.out.println("language: " + n.getName()));
+        // languagesRepo.findAll().forEach(n -> System.out.println("language: " + n.getName()));
         return "/clients";
     }
 
@@ -62,7 +59,7 @@ public class ClaimСontroller {
     public String addLang(
             @RequestParam String name,
             @RequestParam String code
-            ) {
+    ) {
 
         Languages langFromDb = null;//languagesRepo.findByCode(code.trim().toUpperCase());
 
@@ -107,7 +104,7 @@ public class ClaimСontroller {
             model.addAttribute("action", "edit");
 
         } else {
-            System.err.println("unknouwn Language ID" );
+            System.err.println("unknouwn Language ID");
         }
 
         return "/clients";
@@ -126,8 +123,8 @@ public class ClaimСontroller {
             languages.setCode(code.trim().toUpperCase());
             //languagesRepo.save(languages);
         }
-            model.addAttribute("isAddLang", false);
-            model.addAttribute("isLangList", true);
+        model.addAttribute("isAddLang", false);
+        model.addAttribute("isLangList", true);
 
         return "redirect:/clients";
     }
@@ -141,6 +138,31 @@ public class ClaimСontroller {
         crlClaimOpen.claimOpen(dbEnvData.getEntityManager(), crlPayment.getId());
         log.info("Claim added for id: " + crlPayment.getId());
         return "redirect:/clients";
+    }
+
+    @PostMapping
+    public String srch(Model model, @RequestParam(defaultValue = "") String searchName) {
+        log.info("searchName: " +searchName);
+        //List<CrlPayment> list = crlPaymentRepository.findByGeneralIdCustomerFullName(searchName);
+        List<CrlPayment> list = crlPaymentRepository.findByGName(searchName);
+        model.addAttribute("clients", list);
+        model.addAttribute("isLangList", true);
+        model.addAttribute("isAddLang", false);
+        model.addAttribute("action", "add");
+        return "/clients";
+    }
+
+    @GetMapping("clientview/{id}")
+    public String viewclaim(
+            @PathVariable("id") CrlPayment crlPayment, Model model
+    ) {
+        log.info("View claim for id: " + crlPayment.getId());
+        List<CrlPayment> list = crlPaymentRepository.findByGName("");
+        model.addAttribute("clients", list);
+        model.addAttribute("isLangList", true);
+        model.addAttribute("isAddLang", false);
+        model.addAttribute("action", "add");
+        return "/clientview";
     }
 
 

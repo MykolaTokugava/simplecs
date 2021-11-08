@@ -5,7 +5,7 @@
 
     <div>
         <fieldset>
-            <legend>Поиск</legend>
+            <legend>Поиск!!!</legend>
             <form name="searchForm" action="/clients/" method="post">
                 <div class="col-sm-6">
                 <@ui.formInput id="t3" name="searchName"  label="Customer Name"/>
