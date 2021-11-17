@@ -1,6 +1,9 @@
 package ua.metlife.claims.simplecs.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -10,6 +13,8 @@ import ua.metlife.claims.simplecs.repo.CrsfClmRepository;
 import ua.metlife.claims.simplecs.repo.CsSystemRepository;
 import ua.metlife.claims.simplecs.utils.DbEnvData;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
 
 @Controller
@@ -91,6 +96,15 @@ public class MainController {
     @GetMapping("/")
     public String greeting(Map<String, Object> model) {
         return "greeting";
+    }
+
+    @RequestMapping(value="/logout", method=RequestMethod.GET)
+    public String logoutPage(HttpServletRequest request, HttpServletResponse response) {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        if (auth != null){
+            new SecurityContextLogoutHandler().logout(request, response, auth);
+        }
+        return "redirect:/";
     }
 
 

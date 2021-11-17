@@ -5,6 +5,8 @@
  */
 package ua.metlife.claims.simplecs.entity.crl;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
@@ -15,6 +17,7 @@ import java.util.List;
  *
  * @author NPopov
  */
+@Data
 @Entity
 @Table(name = "CRL_BANK")
 @XmlRootElement
@@ -35,9 +38,6 @@ public class CrlBank implements Serializable {
     private String bankCode;
     @Column(name = "BANK_DESC")
     private String bankDesc;
-    @Lob
-    @Column(name = "LOGO")
-    private Serializable logo;
     @Column(name = "OLD_ID")
     private Integer oldId;
     @Column(name = "OLAS_ID")
@@ -100,14 +100,6 @@ public class CrlBank implements Serializable {
         this.bankDesc = bankDesc;
     }
 
-    public Serializable getLogo() {
-        return logo;
-    }
-
-    public void setLogo(Serializable logo) {
-        this.logo = logo;
-    }
-
     public Integer getOldId() {
         return oldId;
     }
@@ -156,22 +148,22 @@ public class CrlBank implements Serializable {
         this.risklevel = risklevel;
     }
 
-    @XmlTransient
-    public List<CrlBankProduct> getCrlBankProductList() {
-        return crlBankProductList;
-    }
-
-    public void setCrlBankProductList(List<CrlBankProduct> crlBankProductList) {
-        this.crlBankProductList = crlBankProductList;
-    }
-
-    @XmlTransient
-    public List<CrlBankContract> getCrlBankContractList() {
-        return crlBankContractList;
-    }
-
-    public void setCrlBankContractList(List<CrlBankContract> crlBankContractList) {
-        this.crlBankContractList = crlBankContractList;
-    }
+//    @XmlTransient
+//    public List<CrlBankProduct> getCrlBankProductList() {
+//        return crlBankProductList;
+//    }
+//
+//    public void setCrlBankProductList(List<CrlBankProduct> crlBankProductList) {
+//        this.crlBankProductList = crlBankProductList;
+//    }
+//
+//    @XmlTransient
+//    public List<CrlBankContract> getCrlBankContractList() {
+//        return crlBankContractList;
+//    }
+//
+//    public void setCrlBankContractList(List<CrlBankContract> crlBankContractList) {
+//        this.crlBankContractList = crlBankContractList;
+//    }
 
 }

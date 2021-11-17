@@ -15,36 +15,42 @@
         </ul>
     </div>
 
-                <#if isLogin>
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-            Load Words
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+<#--                <#if isLogin>-->
+<#--    <div class="dropdown">-->
+<#--        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"-->
+<#--                aria-haspopup="true" aria-expanded="false">-->
+<#--            Load Words-->
+<#--        </button>-->
+<#--        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">-->
 
-            <a class="dropdown-item" href="/logout">From File</a>
-            <a class="dropdown-item" href="/login">TexArea</a>
-        </div>
-    </div>
-                </#if>
-    <p>&nbsp;</p>
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-            System Action
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <#if isLogin>
-                <a class="dropdown-item" href="/logout">LogOut</a>
-                </#if>
-                <#if isLogin==false>
-                <a class="dropdown-item" href="/login">Login</a>
-                </#if>
-            <a class="dropdown-item" href="#">Clear</a>
-        </div>
-    </div>
-    <p>&nbsp;</p>
+<#--            <a class="dropdown-item" href="/logout">From File</a>-->
+<#--            <a class="dropdown-item" href="/login">TexArea</a>-->
+<#--        </div>-->
+<#--    </div>-->
+<#--                </#if>-->
+<#--    <p>&nbsp;</p>-->
+<#--    <div class="dropdown">-->
+<#--        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"-->
+<#--                aria-haspopup="true" aria-expanded="false">-->
+<#--            System Action-->
+<#--        </button>-->
+<#--        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">-->
+<#--                <#if isLogin>-->
+<#--                <a class="dropdown-item" href="/logout">LogOut</a>-->
+<#--                </#if>-->
+<#--                <#if isLogin==false>-->
+<#--                <a class="dropdown-item" href="/login">Login</a>-->
+<#--                </#if>-->
+<#--&lt;#&ndash;            <a class="dropdown-item" href="#">Clear</a>&ndash;&gt;-->
+<#--        </div>-->
+<#--    </div>-->
+<#--    <p>&nbsp;</p>-->
+    <#if isLogin>
+        <div class="navbar-text mr-3"><a href="/logout"><b>Logout</b></a></div>
+    </#if>
+    <#if isLogin==false>
+        <div class="navbar-text mr-3"><a href="/login"><b>Login</b></a></div>
+    </#if>
     <div class="navbar-text mr-3"><b><#if user??>${name}<#else>Please, login</#if></b></div>
 
 </nav>

@@ -32,7 +32,7 @@ public class PersonSevice implements UserDetailsService {
         Person person = personRepo.findByUsername(username);
 
         System.out.println("username = " + username);
-//$2a$08$isQwHieSbqwSLEirXFeI3eSxuEqe/Mvp1jR4yXNp15VQ78ZELcfBm
+        //$2a$08$pCPq97GhdFTtcxOySmdKEONI0ERQTmKTqJsWRp7uNm5G6NA0ksHWO
 //        for (Person p : personRepo.findAll()) {
 //            p.setPassword(passwordEncoder.encode("pass"));
 //            p.setEmail("zop11a@mail.sru");

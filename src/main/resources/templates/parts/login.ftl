@@ -13,7 +13,6 @@
         </div>
     </div>
     <input type="hidden" name="_csrf" value="${_csrf.token}" />
-    <a href="/registration">Add new user</a>
     <button class="btn btn-primary" type="submit">Sign In</button>
 </form>
 </#macro>

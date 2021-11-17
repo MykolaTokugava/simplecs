@@ -20,22 +20,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9194258a-5207-4f64-ac34-1b465a3a883c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/clientview.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/ui.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/test/BulkCopyCSV.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/client/clientinfo.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/common-mini.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/controllers/ClaimСontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/controllers/ClaimСontroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/CrlBank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/CrlBank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/CrlTariffPlan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/CrlTariffPlan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/repo/CrlPaymentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/repo/CrlPaymentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/service/PersonSevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/service/PersonSevice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/clients.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/clients.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/lang/langList.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/lang/langList.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/clientview.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/clientview.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/lang/actionForm.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/client/actionForm.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/lang/langList.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/client/clientsList.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/login.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/simplecs-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/simplecs-1.0-SNAPSHOT.jar.original" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,8 +50,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -73,7 +77,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../__R/sweater" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -86,6 +90,8 @@
       <recent name="ua.metlife.claims.simplecs.controllers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\_REPO\simplecs\src\main\resources\templates" />
+      <recent name="D:\_REPO\simplecs\src\main\resources\templates\parts\client" />
       <recent name="E:\Met\Source code - Copy\simplecs\src\main\resources" />
       <recent name="E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\repo" />
     </key>
@@ -100,11 +106,11 @@
       <recent name="ua.metlife.claims.simplecs.ClaimAction" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\_REPO\simplecs\src\main\resources\templates\parts" />
+      <recent name="D:\_REPO\simplecs\src\main\resources\templates\parts\client" />
       <recent name="D:\_REPO\simplecs\src\main\resources\templates" />
       <recent name="E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\ClaimsEntity" />
       <recent name="E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\processing" />
-      <recent name="E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\csr" />
-      <recent name="E:\Met\Source code - Copy\simplecs\src\main\java\ua\metlife\claims\simplecs\entity\crs" />
     </key>
   </component>
   <component name="RunManager" selected="Application.App">
@@ -119,6 +125,20 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ua.metlife.claims.simplecs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ua.metlife.claims.simplecs.ClaimAction.Test" />
+      <module name="simplecs" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ua.metlife.claims.simplecs.ClaimAction.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -174,12 +194,14 @@
     </configuration>
     <list>
       <item itemvalue="Application.App" />
+      <item itemvalue="Application.Test" />
       <item itemvalue="JUnit.ClaimСontrollerTest.getList" />
       <item itemvalue="Spring Boot.App" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.App" />
+        <item itemvalue="Application.Test" />
         <item itemvalue="JUnit.ClaimСontrollerTest.getList" />
         <item itemvalue="Application.App" />
       </list>
@@ -232,26 +254,26 @@
       <workItem from="1634106795239" duration="5044000" />
       <workItem from="1636129578179" duration="8241000" />
       <workItem from="1636267196726" duration="1475000" />
-      <workItem from="1636355392899" duration="8203000" />
+      <workItem from="1636355392899" duration="12863000" />
+      <workItem from="1636474027270" duration="12754000" />
+      <workItem from="1636711764730" duration="4734000" />
+      <workItem from="1637044640991" duration="15873000" />
+      <workItem from="1637133278512" duration="11691000" />
     </task>
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="ClaimСontrollerTest_getList - 2021.09.20 at 09h 28m 20s.xml">
-      <configuration name="ClaimСontrollerTest.getList" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ClaimСontrollerTest_getList - 2021.09.20 at 09h 28m 39s.xml">
-      <configuration name="ClaimСontrollerTest.getList" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ClaimСontrollerTest_getList - 2021.09.20 at 09h 28m 58s.xml">
-      <configuration name="ClaimСontrollerTest.getList" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ClaimСontrollerTest_getList - 2021.10.10 at 16h 02m 42s.xml">
-      <configuration name="ClaimСontrollerTest.getList" configurationId="JUnit" />
-    </history-entry>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -266,30 +288,42 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="414" y="234" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1636128901113">
+    <state x="414" y="234" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1636723458148">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="414" y="234" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1636128901113" />
-    <state width="1877" height="378" key="GridCell.Tab.0.bottom" timestamp="1636390083222">
+    <state x="414" y="234" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1636723458148" />
+    <state x="740" y="335" key="FileChooserDialogImpl" timestamp="1637154283537">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="378" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1636390083222" />
-    <state width="1877" height="378" key="GridCell.Tab.0.center" timestamp="1636390083222">
+    <state x="740" y="335" key="FileChooserDialogImpl/0.0.1920.1160@0.0.1920.1160" timestamp="1637154283537" />
+    <state width="1877" height="397" key="GridCell.Tab.0.bottom" timestamp="1637155077204">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="378" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1636390083222" />
-    <state width="1877" height="378" key="GridCell.Tab.0.left" timestamp="1636390083222">
+    <state width="1877" height="397" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1637155077204" />
+    <state width="1877" height="397" key="GridCell.Tab.0.center" timestamp="1637155077204">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="378" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1636390083222" />
-    <state width="1877" height="378" key="GridCell.Tab.0.right" timestamp="1636390083222">
+    <state width="1877" height="397" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1637155077204" />
+    <state width="1877" height="397" key="GridCell.Tab.0.left" timestamp="1637155077204">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1877" height="378" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1636390083222" />
-    <state x="667" y="182" width="585" height="795" key="find.popup" timestamp="1636358401277">
+    <state width="1877" height="397" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1637155077204" />
+    <state width="1877" height="397" key="GridCell.Tab.0.right" timestamp="1637155077204">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="667" y="182" width="585" height="795" key="find.popup/0.0.1920.1160@0.0.1920.1160" timestamp="1636358401277" />
+    <state width="1877" height="397" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1637155077204" />
+    <state x="490" y="234" key="Maven.ArtifactSearchDialog" timestamp="1636467284057">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="490" y="234" key="Maven.ArtifactSearchDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1636467284057" />
+    <state x="333" y="87" width="1239" height="1017" key="find.popup" timestamp="1637154777103">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="333" y="87" width="1239" height="1017" key="find.popup/0.0.1920.1160@0.0.1920.1160" timestamp="1637154777103" />
+    <state x="616" y="270" key="run.anything.popup" timestamp="1636477770529">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="616" y="270" key="run.anything.popup/0.0.1920.1160@0.0.1920.1160" timestamp="1636477770529" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

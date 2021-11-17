@@ -12,6 +12,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 
 /**
  *
@@ -78,17 +79,25 @@ public class CrlTariffPlan implements Serializable {
     private Integer fixedAmount;
     @Column(name = "FIXED_PREMIUM")
     private Integer fixedPremium;
-    /*
-     @OneToMany(mappedBy = "currentTpId")
-     private List<CrlGeneral1c> crlGeneral1cList;
-     @JoinColumn(name = "BP_ID", referencedColumnName = "BP_ID")
+//    @Column(name = "BP_ID")
+//    private Integer bp_Id;
+
+
+//     @OneToMany(mappedBy = "currentTpId")
+//     private List<CrlGeneral1c> crlGeneral1cList;
+
+     @JoinColumn(name = "BP_ID", referencedColumnName = "BP_ID", insertable = false, updatable = false, nullable = true)
      @ManyToOne(optional = false)
      private CrlBankProduct bpId;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "tpId")
+    private List<CrlTpCoef> crlTpCoefList;
+
+
+    /*
      @OneToMany(mappedBy = "tpId")
      private List<CrlGeneralBank> crlGeneralBankList;
-     @OneToMany(cascade = CascadeType.ALL, mappedBy = "tpId")
-     private List<CrlTpCoef> crlTpCoefList;
-     @OneToMany(mappedBy = "tpId")
+    @OneToMany(mappedBy = "tpId")
      private List<CrlPayment> crlPaymentList;
      */
 

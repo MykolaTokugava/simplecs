@@ -5,12 +5,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import org.springframework.web.servlet.view.RedirectView;
 import ua.metlife.claims.simplecs.ClaimAction.CrlClaimOpen;
+import ua.metlife.claims.simplecs.entity.crl.CrlGeneral1c;
+import ua.metlife.claims.simplecs.entity.crl.CrlGeneralBank;
 import ua.metlife.claims.simplecs.entity.crl.CrlPayment;
 import ua.metlife.claims.simplecs.entity.crl.Languages;
+import ua.metlife.claims.simplecs.processing.Convert;
 import ua.metlife.claims.simplecs.repo.CrlPaymentRepository;
 import ua.metlife.claims.simplecs.utils.DbEnvData;
 
+import javax.persistence.EntityManager;
+import javax.servlet.http.HttpServletRequest;
+import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
@@ -27,13 +36,20 @@ public class ClaimСontroller {
     @Autowired // This means to get the bean called userRepository
     private DbEnvData dbEnvData;
 
+    @Autowired
+    private HttpServletRequest request;
+
     @GetMapping
     public String getList(Model model) {
-        model.addAttribute("clients", crlPaymentRepository.findTop20ByOrderByIdDesc());
-        List<CrlPayment> list = crlPaymentRepository.findTop20ByOrderByIdDesc();
-        model.addAttribute("isLangList", true);
+        model.addAttribute("clients", new ArrayList<>());//crlPaymentRepository.findTop20ByOrderByIdDesc()
+        model.addAttribute("isClientList", true);
         model.addAttribute("isAddLang", false);
         model.addAttribute("action", "add");
+        model.addAttribute("isStatus", true);
+        model.addAttribute("statusAction", request.getSession().getAttribute("statusAction")==null ? "" : request.getSession().getAttribute("statusAction") );
+        model.addAttribute("searchName", "");
+        model.addAttribute("taxcode", "");
+        request.getSession().setAttribute("statusAction", null);
         return "/clients";
     }
 
@@ -45,15 +61,15 @@ public class ClaimСontroller {
         return "/clients";
     }
 
-    @GetMapping("add")
-    public String languagesAdd(
-            Model model
-    ) {
-        model.addAttribute("isAddLang", true);
-        model.addAttribute("isLangList", false);
-        model.addAttribute("action", "add");
-        return "/clients";
-    }
+//    @GetMapping("add")
+//    public String languagesAdd(
+//            Model model
+//    ) {
+//        model.addAttribute("isAddLang", true);
+//        model.addAttribute("isClientList", false);
+//        model.addAttribute("action", "add");
+//        return "/clients";
+//    }
 
     @PostMapping("add")
     public String addLang(
@@ -100,8 +116,9 @@ public class ClaimСontroller {
             model.addAttribute("code", languages.getCode());
             model.addAttribute("id", languages.getId());
             model.addAttribute("isAddLang", true);
-            model.addAttribute("isLangList", false);
+            model.addAttribute("isClientList", false);
             model.addAttribute("action", "edit");
+
 
         } else {
             System.err.println("unknouwn Language ID");
@@ -124,7 +141,7 @@ public class ClaimСontroller {
             //languagesRepo.save(languages);
         }
         model.addAttribute("isAddLang", false);
-        model.addAttribute("isLangList", true);
+        model.addAttribute("isClientList", true);
 
         return "redirect:/clients";
     }
@@ -134,21 +151,56 @@ public class ClaimСontroller {
     public String addclaim(
             @PathVariable("id") CrlPayment crlPayment, Model model
     ) {
-        log.info("Prepared for add claim for id: " + crlPayment.getId());
-        crlClaimOpen.claimOpen(dbEnvData.getEntityManager(), crlPayment.getId());
+        log.info("Prepared for add claim for id!: " + crlPayment.getId());
+        claimOpen(dbEnvData.getEntityManager(), crlPayment.getId());
         log.info("Claim added for id: " + crlPayment.getId());
+
+        model.addAttribute("searchName", "");
+        model.addAttribute("taxcode", "");
+        model.addAttribute("isStatus", true);
+        request.getSession().setAttribute("statusAction", "Claim added for: "+crlPayment.getGeneralId().getCustomerFullName());
+
         return "redirect:/clients";
     }
 
+    private void claimOpen(EntityManager e, Integer i) {
+        crlClaimOpen.claimOpen(e, i);
+    }
+
+
     @PostMapping
-    public String srch(Model model, @RequestParam(defaultValue = "") String searchName) {
+    public String srch(Model model, @RequestParam(defaultValue = "") String searchName, @RequestParam(defaultValue = "") String taxcode) {
         log.info("searchName: " +searchName);
-        //List<CrlPayment> list = crlPaymentRepository.findByGeneralIdCustomerFullName(searchName);
-        List<CrlPayment> list = crlPaymentRepository.findByGName(searchName);
-        model.addAttribute("clients", list);
-        model.addAttribute("isLangList", true);
+        taxcode = taxcode.trim();
+        searchName = searchName.toLowerCase().trim();
+        List<CrlPayment> list = new ArrayList<>();
+        if (taxcode.length()>4 && searchName.length()==0) {
+            list = crlPaymentRepository.findByTaxcode(taxcode);
+        } else if (taxcode.length()==0 && searchName.length()>5) {
+            list = crlPaymentRepository.findByGName(searchName);
+        } else if (taxcode.length()>4 && searchName.length()>5) {
+            list = crlPaymentRepository.findByGNameTaxcode(searchName, taxcode);
+        } else {
+            //list = crlPaymentRepository.findTop20ByOrderByIdDesc();
+            list = crlPaymentRepository.findTop20WithStatusClaim();
+        }
+
+        List<CrlPayment> listResult = new ArrayList<>();
+
+        list.stream().limit(20).forEach(x->listResult.add(x));
+
+        log.info("listResult.size(): " + listResult.size());
+
+        //findByGNameTaxcode
+        model.addAttribute("clients", listResult);
+        model.addAttribute("isClientList", true);
         model.addAttribute("isAddLang", false);
         model.addAttribute("action", "add");
+        model.addAttribute("searchName", searchName);
+        model.addAttribute("taxcode", taxcode);
+        request.getSession().setAttribute("searchName", searchName);
+        model.addAttribute("isStatus", false);
+        //request.getSession().setAttribute("statusAction","Added");
         return "/clients";
     }
 
@@ -156,12 +208,39 @@ public class ClaimСontroller {
     public String viewclaim(
             @PathVariable("id") CrlPayment crlPayment, Model model
     ) {
+        if (crlPayment==null) {
+            model.addAttribute("isData", false);
+            model.addAttribute("isClient", true);
+            model.addAttribute("isStatus", false);
+            return "/clientview";
+        }
         log.info("View claim for id: " + crlPayment.getId());
-        List<CrlPayment> list = crlPaymentRepository.findByGName("");
-        model.addAttribute("clients", list);
-        model.addAttribute("isLangList", true);
-        model.addAttribute("isAddLang", false);
-        model.addAttribute("action", "add");
+        CrlGeneral1c crlGeneral1c = crlPayment.getGeneralId();
+        CrlGeneralBank crlGeneralBank = crlPayment.getCrlGeneralBank();
+        String address = crlGeneralBank.getCustomerAddress()==null ? "" : crlGeneralBank.getCustomerAddress();
+        if (address.length()>30) address = address.substring(0,29);
+
+        model.addAttribute("isData", true);
+        model.addAttribute("isClient", false);
+        model.addAttribute("isStatus", false);
+
+        model.addAttribute("id", crlPayment.getId());
+        model.addAttribute("fullName", crlGeneral1c.getCustomerFullName());
+        model.addAttribute("dob", Convert.stringToDateFormatString(Convert.DATE_FORMAT_BASE, Convert.DATE_FORMAT_UA, crlGeneral1c.getCustomerDateOfBirth()));
+        model.addAttribute("taxcode", crlGeneralBank.getTaxcode()==null ? "" : crlGeneralBank.getTaxcode());
+        model.addAttribute("passport", crlGeneralBank.getInsurantPassport());
+        model.addAttribute("address", address);
+        model.addAttribute("bank", "["+crlGeneral1c.getCurrentTpId().getBpId().getBpBankId().getBankCode() +"] " +crlGeneral1c.getCurrentTpId().getBpId().getBpBankId().getBankName());
+        model.addAttribute("bank_tp", crlGeneral1c.getCurrentTpId().getBpId().getBpName());
+        model.addAttribute("paidfrom", Convert.stringToDateFormatString(Convert.DATE_FORMAT_BASE, Convert.DATE_FORMAT_UA, crlPayment.getPaidFrom()));
+        model.addAttribute("paidto", Convert.stringToDateFormatString(Convert.DATE_FORMAT_BASE, Convert.DATE_FORMAT_UA, crlPayment.getPaidTo()));
+        model.addAttribute("paiddate", Convert.stringToDateFormatString(Convert.DATE_FORMAT_BASE, Convert.DATE_FORMAT_UA, crlPayment.getDate1c()));
+        model.addAttribute("amount", crlPayment.getAmount());
+        model.addAttribute("premium", crlPayment.getPremiumCalculated()!=null ? crlPayment.getPremiumCalculated() : BigDecimal.ZERO);
+        model.addAttribute("titleInfo", "Это мой заголовок");
+        model.addAttribute("tplan", crlGeneral1c.getCurrentTpId().getTpName());
+        model.addAttribute("tpCode", crlGeneral1c.getCurrentTpId().getTpCode());
+        model.addAttribute("tarrifs", crlGeneral1c.getCurrentTpId().getCrlTpCoefList());
         return "/clientview";
     }
 

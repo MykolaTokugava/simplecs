@@ -11,12 +11,12 @@ import java.util.Set;
 
 
 @Entity
-@Table(name = "person")
+@Table(name = "cs_person")
 
 public class Person implements UserDetails {
 
     @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
-    @CollectionTable(name = "person_roles", joinColumns = @JoinColumn(name = "id_person"))
+    @CollectionTable(name = "cs_person_roles", joinColumns = @JoinColumn(name = "id_person"))
     @Enumerated(EnumType.STRING)
     private Set<Role> roles;
 

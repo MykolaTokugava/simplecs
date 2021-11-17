@@ -19,9 +19,17 @@ public interface CrlPaymentRepository extends CrudRepository<CrlPayment, Integer
 
     List<CrlPayment> findByGeneralIdCustomerFullName(@Param("name") String name);
 
-    @Query("SELECT p FROM CrlPayment p WHERE p.generalId.customerFullName LIKE %:name%")
+    @Query("SELECT p FROM CrlPayment p WHERE LOWER(p.generalId.customerFullName) LIKE %:name%")
     List<CrlPayment> findByGName(@Param("name") String name);
 
 
+    @Query("SELECT p FROM CrlPayment p WHERE LOWER(p.generalId.customerFullName) LIKE %:name% OR p.generalId.taxcode=:taxcode")
+    List<CrlPayment> findByGNameTaxcode(@Param("name") String name, @Param("taxcode") String taxcode);
+
+    @Query("SELECT p FROM CrlPayment p WHERE p.generalId.taxcode=:taxcode")
+    List<CrlPayment> findByTaxcode(@Param("taxcode") String taxcode);
+
+    @Query("SELECT p FROM CrlPayment p WHERE p.generalId.claim=1 order by p.generalId.id")
+    List<CrlPayment> findTop20WithStatusClaim();
 
 }
