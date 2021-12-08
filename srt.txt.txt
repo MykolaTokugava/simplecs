@@ -1,0 +1,938 @@
+-- public.clmagt definition
+
+-- Drop table
+
+-- DROP TABLE public.clmagt;
+
+CREATE TABLE public.clmagt (
+	id numeric(9) NOT NULL,
+	polnum varchar(10) NOT NULL,
+	clmnum varchar(10) NOT NULL,
+	status varchar(1) NOT NULL,
+	agtname1 varchar(100) NOT NULL,
+	agtphone1 varchar(50) NOT NULL,
+	agtname2 varchar(100) NOT NULL,
+	agtphone2 varchar(50) NOT NULL,
+	agtmail1 bpchar(30) NOT NULL,
+	agtmail2 bpchar(30) NOT NULL,
+	CONSTRAINT clmagt_pkey PRIMARY KEY (id)
+);
+
+
+-- public.crl_bank definition
+
+-- Drop table
+
+-- DROP TABLE public.crl_bank;
+
+CREATE TABLE public.crl_bank (
+	bank_id int4 NOT NULL,
+	bank_name varchar(50) NOT NULL,
+	bank_code varchar(8) NOT NULL,
+	bank_desc varchar(255) NULL,
+	logo varchar(255) NULL,
+	old_id int4 NULL,
+	olas_id bpchar(8) NULL,
+	countryofregistration varchar(5) NULL,
+	countryofoperation varchar(5) NULL,
+	edrpou varchar(10) NULL,
+	risklevel varchar(1) NULL,
+	CONSTRAINT crl_bank_pkey PRIMARY KEY (bank_id)
+);
+
+
+-- public.crl_bank_contract definition
+
+-- Drop table
+
+-- DROP TABLE public.crl_bank_contract;
+
+CREATE TABLE public.crl_bank_contract (
+	id int4 NOT NULL,
+	bank_id int4 NOT NULL,
+	contract_no varchar(255) NOT NULL,
+	CONSTRAINT crl_bank_contract_pkey PRIMARY KEY (id)
+);
+
+
+-- public.crl_bank_product definition
+
+-- Drop table
+
+-- DROP TABLE public.crl_bank_product;
+
+CREATE TABLE public.crl_bank_product (
+	bp_id int4 NOT NULL,
+	bp_bank_id int4 NOT NULL,
+	bp_name varchar(50) NOT NULL,
+	bp_valid_from bpchar(8) NULL,
+	bp_valid_to bpchar(8) NULL,
+	bp_desc varchar(255) NULL,
+	old_id bpchar(8) NULL,
+	tp_is_dynamic int4 NULL,
+	CONSTRAINT crl_bank_product_pkey PRIMARY KEY (bp_id)
+);
+
+
+-- public.crl_bp_ip definition
+
+-- Drop table
+
+-- DROP TABLE public.crl_bp_ip;
+
+CREATE TABLE public.crl_bp_ip (
+	id int4 NOT NULL,
+	bp_id int4 NOT NULL,
+	ip_id int4 NOT NULL,
+	CONSTRAINT crl_bp_ip_pkey PRIMARY KEY (id)
+);
+
+
+-- public.crl_general_1c definition
+
+-- Drop table
+
+-- DROP TABLE public.crl_general_1c;
+
+CREATE TABLE public.crl_general_1c (
+	id int4 NOT NULL,
+	policy_id int4 NULL,
+	issue_date bpchar(8) NULL,
+	mature_date bpchar(8) NULL,
+	amount numeric(16, 4) NULL,
+	insur_tariff numeric(22, 6) NULL,
+	customer_full_name varchar(255) NULL,
+	customer_date_of_birth bpchar(8) NULL,
+	taxcode varchar(12) NULL,
+	claim int4 NULL,
+	insur_prog varchar(10) NULL,
+	claim_date bpchar(8) NULL,
+	full_refund int4 NULL,
+	initial_tp_id int4 NULL,
+	"comment" varchar(1024) NULL,
+	original_raw_data varchar(1024) NULL,
+	error_flag bpchar(3) NULL,
+	import_id int4 NULL,
+	premature_closure int4 NULL,
+	current_tp_id int4 NULL,
+	CONSTRAINT crl_general_1c_pkey PRIMARY KEY (id)
+);
+
+
+-- public.crl_general_bank definition
+
+-- Drop table
+
+-- DROP TABLE public.crl_general_bank;
+
+CREATE TABLE public.crl_general_bank (
+	id int4 NOT NULL,
+	related_1c_gen_id int4 NULL,
+	policy_id int4 NULL,
+	taxcode varchar(12) NULL,
+	issue_date bpchar(8) NULL,
+	mature_date bpchar(8) NULL,
+	amount numeric(16, 4) NULL,
+	tp_id int4 NULL,
+	customer_full_name varchar(255) NULL,
+	customer_dob bpchar(8) NULL,
+	customer_address varchar(255) NULL,
+	error_flag bpchar(3) NULL,
+	error_message varchar(1024) NULL,
+	old_id int4 NULL,
+	import_id int4 NULL,
+	customer_sex bpchar(1) NULL,
+	customer_passport varchar(255) NULL,
+	bank_branch_code varchar(150) NULL,
+	insurant_id varchar(255) NULL,
+	insurant_full_name varchar(255) NULL,
+	insurant_address varchar(255) NULL,
+	insurant_passport bpchar(30) NULL,
+	insurant_dob bpchar(8) NULL,
+	citizenship varchar(128) NULL,
+	CONSTRAINT crl_general_bank_pkey PRIMARY KEY (id)
+);
+
+
+-- public.crl_insur_product definition
+
+-- Drop table
+
+-- DROP TABLE public.crl_insur_product;
+
+CREATE TABLE public.crl_insur_product (
+	ip_id int4 NOT NULL,
+	ip_name varchar(50) NOT NULL,
+	ip_code varchar(10) NULL,
+	ip_desc varchar(1024) NULL,
+	product_group varchar(5) NULL,
+	CONSTRAINT crl_insur_product_pkey PRIMARY KEY (ip_id)
+);
+
+
+-- public.crl_payment definition
+
+-- Drop table
+
+-- DROP TABLE public.crl_payment;
+
+CREATE TABLE public.crl_payment (
+	id int4 NOT NULL,
+	general_id int4 NOT NULL,
+	tp_id int4 NULL,
+	paid_from bpchar(8) NULL,
+	paid_to bpchar(8) NULL,
+	amount numeric(16, 4) NULL,
+	premium_calculated numeric(16, 4) NULL,
+	premium_paid numeric(16, 4) NULL,
+	premium_diff numeric(16, 4) NULL,
+	bank_share_calculated numeric(16, 4) NULL,
+	bank_share_paid numeric(16, 4) NULL,
+	bank_share_diff numeric(16, 4) NULL,
+	our_share_calculated numeric(16, 4) NULL,
+	our_share_paid numeric(16, 4) NULL,
+	our_share_diff numeric(16, 4) NULL,
+	status bpchar(3) NOT NULL,
+	error_flag bpchar(3) NULL,
+	ref_payment_id int4 NULL,
+	date_1c bpchar(8) NULL,
+	"comment" varchar(1024) NULL,
+	raw_data varchar(1024) NULL,
+	import_id int4 NULL,
+	old_1c_id int4 NULL,
+	payment_month bpchar(8) NOT NULL,
+	real_modality varchar(3) NULL,
+	description varchar(160) NULL,
+	CONSTRAINT crl_payment_pkey PRIMARY KEY (id)
+);
+
+
+-- public.crl_policy definition
+
+-- Drop table
+
+-- DROP TABLE public.crl_policy;
+
+CREATE TABLE public.crl_policy (
+	id int4 NOT NULL,
+	valid_no varchar(50) NULL,
+	invalid_no varchar(50) NULL,
+	import_id int4 NULL,
+	valid_no_cleaned varchar(50) NULL,
+	invalid_no_cleaned varchar(50) NULL,
+	contract_id varchar(50) NULL,
+	date_create bpchar(8) NULL,
+	payment_type bpchar(1) NULL,
+	policy_ref varchar(50) NULL,
+	status int4 NULL,
+	CONSTRAINT crl_policy_pkey PRIMARY KEY (id)
+);
+
+
+-- public.crl_tariff_plan definition
+
+-- Drop table
+
+-- DROP TABLE public.crl_tariff_plan;
+
+CREATE TABLE public.crl_tariff_plan (
+	tp_id int4 NOT NULL,
+	bp_id int4 NOT NULL,
+	tp_name varchar(50) NOT NULL,
+	tp_code varchar(10) NULL,
+	tp_valid_from date NOT NULL,
+	tp_valid_to date NOT NULL,
+	tp_is_active int2 NOT NULL,
+	tp_repay_period int4 NULL,
+	tp_desc varchar(255) NULL,
+	old_id int4 NULL,
+	tp_alico_percent numeric(15, 4) NULL,
+	tp_bank_percent numeric(15, 4) NULL,
+	tp_bank_coefficient numeric(15, 4) NULL,
+	tp_use_deduct_amount int4 NULL,
+	tp_deduction_amount numeric(16, 4) NULL,
+	tp_alico_renew_percent numeric(17, 4) NULL,
+	tp_bank_renew_percent numeric(17, 4) NULL,
+	tp_maturity_date_age int4 NULL,
+	tp_duration_range bpchar(7) NULL,
+	tp_minage int4 NULL,
+	tp_maxage int4 NULL,
+	fixed_amount int4 NULL,
+	fixed_premium int4 NULL,
+	CONSTRAINT crl_tariff_plan_pkey PRIMARY KEY (tp_id)
+);
+
+
+-- public.crl_tp_coef definition
+
+-- Drop table
+
+-- DROP TABLE public.crl_tp_coef;
+
+CREATE TABLE public.crl_tp_coef (
+	id int4 NOT NULL,
+	tp_id int4 NOT NULL,
+	ip_id int4 NOT NULL,
+	coef_value numeric(15, 4) NULL,
+	fixed_value numeric(17, 4) NULL,
+	fixed_value_coef numeric(22, 7) NULL,
+	CONSTRAINT crl_tp_coef_pkey PRIMARY KEY (id)
+);
+
+
+-- public.crm_claim_nigo definition
+
+-- Drop table
+
+-- DROP TABLE public.crm_claim_nigo;
+
+CREATE TABLE public.crm_claim_nigo (
+	id int4 NOT NULL,
+	claimno varchar(16) NULL,
+	nigo int4 NOT NULL,
+	redflag int4 NOT NULL,
+	CONSTRAINT crm_claim_nigo_pkey PRIMARY KEY (id)
+);
+
+
+-- public.crsfccc definition
+
+-- Drop table
+
+-- DROP TABLE public.crsfccc;
+
+CREATE TABLE public.crsfccc (
+	ccccatg bpchar(2) NOT NULL,
+	ccccode bpchar(4) NOT NULL,
+	cccdesc bpchar(60) NOT NULL
+);
+
+
+-- public.crsfclm definition
+
+-- Drop table
+
+-- DROP TABLE public.crsfclm;
+
+CREATE TABLE public.crsfclm (
+	clmno bpchar(10) NOT NULL,
+	crfid bpchar(1) NOT NULL,
+	clmon bpchar(10) NOT NULL,
+	stat bpchar(2) NOT NULL,
+	statdte bpchar(8) NOT NULL,
+	chck bpchar(1) NOT NULL,
+	faok bpchar(1) NOT NULL,
+	paok bpchar(1) NOT NULL,
+	categ bpchar(2) NOT NULL,
+	death bpchar(1) NOT NULL,
+	cause bpchar(4) NOT NULL,
+	"event" bpchar(4) NOT NULL,
+	iname bpchar(30) NOT NULL,
+	ibthd bpchar(8) NOT NULL,
+	iidno bpchar(11) NOT NULL,
+	iadr1 bpchar(30) NOT NULL,
+	iadr2 bpchar(30) NOT NULL,
+	izip bpchar(6) NOT NULL,
+	icity bpchar(30) NOT NULL,
+	evtdt bpchar(8) NOT NULL,
+	ntfdt bpchar(8) NOT NULL,
+	entdt bpchar(8) NOT NULL,
+	covamt numeric(13, 2) NOT NULL,
+	resamt numeric(13, 2) NOT NULL,
+	bftamt numeric(13, 2) NOT NULL,
+	bfttot numeric(13, 2) NOT NULL,
+	dclobj bpchar(1) NOT NULL,
+	dclp2s numeric(5) NOT NULL,
+	hcllsqn bpchar(4) NOT NULL,
+	setlsqn bpchar(4) NOT NULL,
+	flwlsqn bpchar(4) NOT NULL,
+	fmelsqn bpchar(4) NOT NULL,
+	flelsqn bpchar(4) NOT NULL,
+	setpaid bpchar(1) NOT NULL,
+	setpdte bpchar(8) NOT NULL,
+	fmeamt numeric(13, 2) NOT NULL,
+	fleamt numeric(13, 2) NOT NULL,
+	recusr bpchar(10) NOT NULL,
+	recdte bpchar(8) NOT NULL
+);
+
+
+-- public.crsfclmhi definition
+
+-- Drop table
+
+-- DROP TABLE public.crsfclmhi;
+
+CREATE TABLE public.crsfclmhi (
+	clmno bpchar(10) NOT NULL,
+	seqno bpchar(4) NOT NULL,
+	rstc bpchar(2) NOT NULL,
+	rstcdt bpchar(8) NOT NULL,
+	"action" bpchar(2) NOT NULL,
+	actdte bpchar(8) NOT NULL,
+	actdsc bpchar(40) NOT NULL,
+	recusr bpchar(10) NOT NULL,
+	recdte bpchar(8) NOT NULL
+);
+
+
+-- public.crsfcrp definition
+
+-- Drop table
+
+-- DROP TABLE public.crsfcrp;
+
+CREATE TABLE public.crsfcrp (
+	polno bpchar(10) NOT NULL,
+	plob bpchar(2) NOT NULL,
+	effdte bpchar(8) NOT NULL,
+	matdte bpchar(8) NOT NULL,
+	oname bpchar(30) NOT NULL,
+	adrs1 bpchar(30) NOT NULL,
+	adrs2 bpchar(30) NOT NULL,
+	zip bpchar(6) NOT NULL,
+	city bpchar(30) NOT NULL,
+	recusr bpchar(10) NOT NULL,
+	recdte bpchar(8) NOT NULL
+);
+
+
+-- public.crsfcrr definition
+
+-- Drop table
+
+-- DROP TABLE public.crsfcrr;
+
+CREATE TABLE public.crsfcrr (
+	polno bpchar(10) NOT NULL,
+	rdrno bpchar(2) NOT NULL,
+	plcd bpchar(10) NOT NULL,
+	plob bpchar(2) NOT NULL,
+	effdte bpchar(8) NOT NULL,
+	matdte bpchar(8) NOT NULL,
+	annprm numeric(13, 2) NOT NULL,
+	modprm numeric(13, 2) NOT NULL,
+	covamt numeric(13, 2) NOT NULL,
+	recusr bpchar(10) NOT NULL,
+	recdte bpchar(8) NOT NULL
+);
+
+
+-- public.crsfdcl definition
+
+-- Drop table
+
+-- DROP TABLE public.crsfdcl;
+
+CREATE TABLE public.crsfdcl (
+	dclobj bpchar(1) NOT NULL,
+	dclpw2 numeric(5) NOT NULL,
+	dcldesc bpchar(50) NOT NULL,
+	dclpops bpchar(50) NOT NULL
+);
+
+
+-- public.crsfpcd definition
+
+-- Drop table
+
+-- DROP TABLE public.crsfpcd;
+
+CREATE TABLE public.crsfpcd (
+	pcdplan bpchar(10) NOT NULL,
+	pcdfaok bpchar(1) NOT NULL,
+	pcdplob bpchar(2) NOT NULL,
+	pcdname bpchar(30) NOT NULL,
+	pcdhsc bpchar(1) NOT NULL,
+	pcdidx bpchar(1) NOT NULL,
+	pcdrein bpchar(8) NOT NULL,
+	pcdibnrsc bpchar(6) NOT NULL,
+	pcdibnrcc bpchar(6) NOT NULL,
+	pcdibnrpc bpchar(6) NOT NULL,
+	pcdibnrar bpchar(1) NOT NULL,
+	pcdrbas bpchar(16) NOT NULL,
+	pcdrdet bpchar(16) NOT NULL,
+	pcdrspe bpchar(16) NOT NULL,
+	pcdincrcr bpchar(7) NOT NULL,
+	pcdincrdr bpchar(7) NOT NULL,
+	pcddecrcr bpchar(7) NOT NULL,
+	pcddecrdr bpchar(7) NOT NULL,
+	pcdbnftcr bpchar(7) NOT NULL,
+	pcdbnftdr bpchar(7) NOT NULL
+);
+
+
+-- public.crsfpol definition
+
+-- Drop table
+
+-- DROP TABLE public.crsfpol;
+
+CREATE TABLE public.crsfpol (
+	clmno bpchar(10) NOT NULL,
+	polno bpchar(10) NOT NULL,
+	crfid bpchar(1) NOT NULL,
+	clmon bpchar(10) NOT NULL,
+	stat bpchar(2) NOT NULL,
+	statdte bpchar(8) NOT NULL,
+	faok bpchar(1) NOT NULL,
+	raok bpchar(1) NOT NULL,
+	bnkasgn bpchar(1) NOT NULL,
+	iname bpchar(30) NOT NULL,
+	ibthd bpchar(8) NOT NULL,
+	iidno bpchar(11) NOT NULL,
+	oname bpchar(30) NOT NULL,
+	obthd bpchar(8) NOT NULL,
+	cpyfr bpchar(1) NOT NULL,
+	"type" bpchar(1) NOT NULL,
+	plob bpchar(2) NOT NULL,
+	issdte bpchar(8) NOT NULL,
+	effdte bpchar(8) NOT NULL,
+	paydte bpchar(8) NOT NULL,
+	castat bpchar(2) NOT NULL,
+	bilmod bpchar(2) NOT NULL,
+	modprm numeric(13, 2) NOT NULL,
+	annprm numeric(13, 2) NOT NULL,
+	wcpprm numeric(13, 2) NOT NULL,
+	covamt numeric(13, 2) NOT NULL,
+	resamt numeric(13, 2) NOT NULL,
+	bftamt numeric(13, 2) NOT NULL,
+	bfttot numeric(13, 2) NOT NULL,
+	ccag1fc bpchar(9) NOT NULL,
+	eaag1nm bpchar(30) NOT NULL,
+	ccag2fc bpchar(9) NOT NULL,
+	eaag2nm bpchar(30) NOT NULL,
+	dclobj bpchar(1) NOT NULL,
+	dclp2s numeric(5) NOT NULL,
+	recusr bpchar(10) NOT NULL,
+	recdte bpchar(8) NOT NULL
+);
+
+
+-- public.crsfrsb definition
+
+-- Drop table
+
+-- DROP TABLE public.crsfrsb;
+
+CREATE TABLE public.crsfrsb (
+	rsbclmno bpchar(10) NOT NULL,
+	rsbpolno bpchar(10) NOT NULL,
+	rsbrtype bpchar(2) NOT NULL,
+	rsbridnt bpchar(5) NOT NULL,
+	rsbrdupl bpchar(1) NOT NULL,
+	rsbstat bpchar(2) NOT NULL,
+	rsbstatdte bpchar(8) NOT NULL,
+	rsbfaok bpchar(1) NOT NULL,
+	rsbexgrac bpchar(1) NOT NULL,
+	rsbcbst bpchar(2) NOT NULL,
+	rsbplob bpchar(2) NOT NULL,
+	rsbplcd bpchar(10) NOT NULL,
+	rsbplwc bpchar(1) NOT NULL,
+	rsbhscp bpchar(1) NOT NULL,
+	rsbhscfr bpchar(8) NOT NULL,
+	rsbhscto bpchar(8) NOT NULL,
+	rsbhscfr2 bpchar(8) NOT NULL,
+	rsbhscto2 bpchar(8) NOT NULL,
+	rsbhscfr3 bpchar(8) NOT NULL,
+	rsbhscto3 bpchar(8) NOT NULL,
+	rsbeffdte bpchar(8) NOT NULL,
+	rsbmatdte bpchar(8) NOT NULL,
+	rsbpyudte bpchar(8) NOT NULL,
+	rsbrel bpchar(1) NOT NULL,
+	rsbsex bpchar(1) NOT NULL,
+	rsbinsname bpchar(30) NOT NULL,
+	rsbinsbthd bpchar(8) NOT NULL,
+	rsbissage numeric(3) NOT NULL,
+	rsbannprm numeric(13, 2) NOT NULL,
+	rsbmodprm numeric(13, 2) NOT NULL,
+	rsbhscprm numeric(13, 2) NOT NULL,
+	rsbcovamt numeric(13, 2) NOT NULL,
+	rsbrestyp bpchar(1) NOT NULL,
+	rsbrespct numeric(5, 2) NOT NULL,
+	rsbresamt numeric(13, 2) NOT NULL,
+	rsbresnew numeric(13, 2) NOT NULL,
+	rsbbftpct numeric(5, 2) NOT NULL,
+	rsbbftamt numeric(13, 2) NOT NULL,
+	rsbbfttot numeric(13, 2) NOT NULL,
+	rsbpsettle bpchar(1) NOT NULL,
+	rsbdclobj bpchar(1) NOT NULL,
+	rsbdclp2s numeric(5) NOT NULL,
+	rsbhislsqn bpchar(4) NOT NULL,
+	rsbrecusr bpchar(10) NOT NULL,
+	rsbrecdte bpchar(8) NOT NULL
+);
+
+
+-- public.crsfrsbhi definition
+
+-- Drop table
+
+-- DROP TABLE public.crsfrsbhi;
+
+CREATE TABLE public.crsfrsbhi (
+	hrsbclmno bpchar(10) NOT NULL,
+	hrsbpolno bpchar(10) NOT NULL,
+	hrsbsrctp bpchar(2) NOT NULL,
+	hrsbsrcid bpchar(5) NOT NULL,
+	hrsbrdupl bpchar(1) NOT NULL,
+	hrsbseqno bpchar(4) NOT NULL,
+	hrsbrplan bpchar(10) NOT NULL,
+	hrsbaction bpchar(2) NOT NULL,
+	hrsbactdte bpchar(8) NOT NULL,
+	hrsbactdsc bpchar(40) NOT NULL,
+	hrsbtrstat bpchar(1) NOT NULL,
+	hrsbtrstdt bpchar(8) NOT NULL,
+	hrsbtrcode bpchar(4) NOT NULL,
+	hrsbtrdate bpchar(8) NOT NULL,
+	hrsbtracn1 bpchar(7) NOT NULL,
+	hrsbtracn2 bpchar(7) NOT NULL,
+	hrsbtramnt numeric(13, 2) NOT NULL,
+	hrsbrecusr bpchar(10) NOT NULL,
+	hrsbrecdte bpchar(8) NOT NULL
+);
+
+
+-- public.crsfset definition
+
+-- Drop table
+
+-- DROP TABLE public.crsfset;
+
+CREATE TABLE public.crsfset (
+	setclmno bpchar(10) NOT NULL,
+	setsetno bpchar(4) NOT NULL,
+	setpolno bpchar(10) NOT NULL,
+	setstate bpchar(2) NOT NULL,
+	setcrtdate bpchar(8) NOT NULL,
+	setaprdate bpchar(8) NOT NULL,
+	setapruser bpchar(10) NOT NULL,
+	setpaydate bpchar(8) NOT NULL,
+	setrejdate bpchar(8) NOT NULL,
+	setsetled numeric(13, 2) NOT NULL,
+	settbpaid numeric(13, 2) NOT NULL,
+	setpintot numeric(13, 2) NOT NULL,
+	setpinpct numeric(5, 2) NOT NULL,
+	setpinlsqn bpchar(4) NOT NULL,
+	setsaclsqn bpchar(4) NOT NULL,
+	setnotes bpchar(80) NOT NULL,
+	setrecusr bpchar(10) NOT NULL,
+	setrecdte bpchar(8) NOT NULL,
+	setcurrno bpchar(6) NOT NULL
+);
+
+
+-- public.crsfsrb definition
+
+-- Drop table
+
+-- DROP TABLE public.crsfsrb;
+
+CREATE TABLE public.crsfsrb (
+	srbclmno bpchar(10) NOT NULL,
+	srbsetno bpchar(4) NOT NULL,
+	srbpolno bpchar(10) NOT NULL,
+	srbrsbtp bpchar(2) NOT NULL,
+	srbrsbid bpchar(5) NOT NULL,
+	srbrsbdp bpchar(1) NOT NULL,
+	srbbftplc bpchar(10) NOT NULL,
+	srbbftdsc bpchar(30) NOT NULL,
+	srbbftper numeric(5, 2) NOT NULL,
+	srbbftset numeric(13, 2) NOT NULL,
+	srbbftpay numeric(13, 2) NOT NULL,
+	srbbftsgn bpchar(1) NOT NULL,
+	srbbftpgm bpchar(10) NOT NULL,
+	srbrecusr bpchar(10) NOT NULL,
+	srbrecdte bpchar(8) NOT NULL
+);
+
+
+-- public.cs_accidents definition
+
+-- Drop table
+
+-- DROP TABLE public.cs_accidents;
+
+CREATE TABLE public.cs_accidents (
+	id int4 NOT NULL,
+	id_link int4 NOT NULL,
+	reason_type varchar(300) NOT NULL,
+	reason_info varchar(500) NOT NULL,
+	claim_date timestamp NULL,
+	notification_date timestamp NULL,
+	add_date timestamp NULL,
+	add_ldap_login varchar(100) NOT NULL,
+	export_ldap_login varchar(100) NOT NULL,
+	export_status varchar(3) NOT NULL,
+	export_date timestamp NULL,
+	status varchar(10) NOT NULL,
+	death int4 NOT NULL,
+	CONSTRAINT cs_accidents_pkey PRIMARY KEY (id)
+);
+
+
+-- public.cs_d_category definition
+
+-- Drop table
+
+-- DROP TABLE public.cs_d_category;
+
+CREATE TABLE public.cs_d_category (
+	id int4 NOT NULL,
+	"name" varchar(500) NULL DEFAULT NULL::character varying,
+	"program" int4 NULL,
+	status int4 NULL,
+	CONSTRAINT cs_d_category_pkey PRIMARY KEY (id)
+);
+
+
+-- public.cs_d_program definition
+
+-- Drop table
+
+-- DROP TABLE public.cs_d_program;
+
+CREATE TABLE public.cs_d_program (
+	id int4 NOT NULL,
+	"name" varchar(255) NULL DEFAULT NULL::character varying,
+	status int4 NULL,
+	CONSTRAINT cs_d_program_pkey PRIMARY KEY (id)
+);
+
+
+-- public.cs_d_subcategory definition
+
+-- Drop table
+
+-- DROP TABLE public.cs_d_subcategory;
+
+CREATE TABLE public.cs_d_subcategory (
+	id int4 NOT NULL,
+	"name" varchar(500) NULL DEFAULT NULL::character varying,
+	category int4 NULL,
+	"comment" varchar(5000) NULL DEFAULT NULL::character varying,
+	status int4 NULL,
+	CONSTRAINT cs_d_subcategory_pkey PRIMARY KEY (id)
+);
+
+
+-- public.cs_d_subcategory_item definition
+
+-- Drop table
+
+-- DROP TABLE public.cs_d_subcategory_item;
+
+CREATE TABLE public.cs_d_subcategory_item (
+	id int4 NOT NULL,
+	"name" varchar(500) NULL DEFAULT NULL::character varying,
+	subcategory int4 NULL,
+	"percent" numeric(5, 4) NULL DEFAULT NULL::numeric,
+	status int4 NULL,
+	CONSTRAINT cs_d_subcategory_item_pkey PRIMARY KEY (id)
+);
+
+
+-- public.cs_id_link definition
+
+-- Drop table
+
+-- DROP TABLE public.cs_id_link;
+
+CREATE TABLE public.cs_id_link (
+	id int4 NOT NULL,
+	id_system int4 NOT NULL,
+	id_register int4 NOT NULL,
+	g_user_id int4 NULL,
+	g_contract int4 NULL,
+	c_policy_id int4 NULL,
+	c_tp_id int4 NULL,
+	c_taxcode varchar(20) NULL DEFAULT NULL::character varying,
+	id_personal int4 NOT NULL,
+	eid int4 NOT NULL,
+	olass_pn varchar(12) NULL DEFAULT NULL::character varying,
+	olass_an varchar(12) NULL DEFAULT NULL::character varying,
+	claim_clmno varchar(12) NULL DEFAULT NULL::character varying,
+	claim_polno varchar(12) NULL DEFAULT NULL::character varying,
+	CONSTRAINT cs_id_link_pkey PRIMARY KEY (id)
+);
+
+
+-- public.cs_person definition
+
+-- Drop table
+
+-- DROP TABLE public.cs_person;
+
+CREATE TABLE public.cs_person (
+	id int4 NOT NULL,
+	username varchar(50) NOT NULL,
+	"password" varchar(100) NOT NULL,
+	email varchar(30) NOT NULL,
+	active varchar(20) NOT NULL,
+	"admin" varchar(20) NOT NULL
+);
+
+
+-- public.cs_person_roles definition
+
+-- Drop table
+
+-- DROP TABLE public.cs_person_roles;
+
+CREATE TABLE public.cs_person_roles (
+	id int4 NOT NULL,
+	id_person int4 NOT NULL,
+	roles varchar(50) NOT NULL
+);
+
+
+-- public.cs_register definition
+
+-- Drop table
+
+-- DROP TABLE public.cs_register;
+
+CREATE TABLE public.cs_register (
+	id int4 NOT NULL,
+	first_name varchar(200) NOT NULL,
+	last_name varchar(200) NOT NULL,
+	informer varchar(150) NOT NULL,
+	contact_phones varchar(300) NOT NULL,
+	contact_email varchar(300) NOT NULL,
+	reason_type varchar(300) NOT NULL,
+	reason_info varchar(500) NOT NULL,
+	death int4 NOT NULL,
+	claim_date timestamp NULL,
+	add_date timestamp NULL,
+	add_ldap_login varchar(100) NOT NULL,
+	status varchar(30) NOT NULL,
+	data_source int4 NOT NULL,
+	id_system int4 NOT NULL,
+	eid int4 NOT NULL,
+	is_insured int4 NULL,
+	patro_name varchar(200) NOT NULL,
+	CONSTRAINT cs_register_pkey PRIMARY KEY (id)
+);
+
+
+-- public.cs_system definition
+
+-- Drop table
+
+-- DROP TABLE public.cs_system;
+
+CREATE TABLE public.cs_system (
+	id int4 NOT NULL,
+	system_name varchar(200) NOT NULL,
+	system_info varchar(500) NOT NULL,
+	system_code varchar(30) NOT NULL,
+	system_type varchar(20) NOT NULL,
+	CONSTRAINT cs_system_pkey PRIMARY KEY (id)
+);
+
+
+INSERT INTO public.clmagt
+(id, polnum, clmnum, status, agtname1, agtphone1, agtname2, agtphone2, agtmail1, agtmail2)
+VALUES(0, '', '', '', '', '', '', '', '', '');
+INSERT INTO public.crl_bank
+(bank_id, bank_name, bank_code, bank_desc, logo, old_id, olas_id, countryofregistration, countryofoperation, edrpou, risklevel)
+VALUES(0, '', '', '', '', 0, '', '', '', '', '');
+INSERT INTO public.crl_bank_contract
+(id, bank_id, contract_no)
+VALUES(0, 0, '');
+INSERT INTO public.crl_bank_product
+(bp_id, bp_bank_id, bp_name, bp_valid_from, bp_valid_to, bp_desc, old_id, tp_is_dynamic)
+VALUES(0, 0, '', '', '', '', '', 0);
+INSERT INTO public.crl_bp_ip
+(id, bp_id, ip_id)
+VALUES(0, 0, 0);
+INSERT INTO public.crl_general_1c
+(id, policy_id, issue_date, mature_date, amount, insur_tariff, customer_full_name, customer_date_of_birth, taxcode, claim, insur_prog, claim_date, full_refund, initial_tp_id, "comment", original_raw_data, error_flag, import_id, premature_closure, current_tp_id)
+VALUES(0, 0, '', '', 0, 0, '', '', '', 0, '', '', 0, 0, '', '', '', 0, 0, 0);
+INSERT INTO public.crl_general_bank
+(id, related_1c_gen_id, policy_id, taxcode, issue_date, mature_date, amount, tp_id, customer_full_name, customer_dob, customer_address, error_flag, error_message, old_id, import_id, customer_sex, customer_passport, bank_branch_code, insurant_id, insurant_full_name, insurant_address, insurant_passport, insurant_dob, citizenship)
+VALUES(0, 0, 0, '', '', '', 0, 0, '', '', '', '', '', 0, 0, '', '', '', '', '', '', '', '', '');
+INSERT INTO public.crl_insur_product
+(ip_id, ip_name, ip_code, ip_desc, product_group)
+VALUES(0, '', '', '', '');
+INSERT INTO public.crl_payment
+(id, general_id, tp_id, paid_from, paid_to, amount, premium_calculated, premium_paid, premium_diff, bank_share_calculated, bank_share_paid, bank_share_diff, our_share_calculated, our_share_paid, our_share_diff, status, error_flag, ref_payment_id, date_1c, "comment", raw_data, import_id, old_1c_id, payment_month, real_modality, description)
+VALUES(0, 0, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', 0, '', '', '', 0, 0, '', '', '');
+INSERT INTO public.crl_policy
+(id, valid_no, invalid_no, import_id, valid_no_cleaned, invalid_no_cleaned, contract_id, date_create, payment_type, policy_ref, status)
+VALUES(0, '', '', 0, '', '', '', '', '', '', 0);
+INSERT INTO public.crl_tariff_plan
+(tp_id, bp_id, tp_name, tp_code, tp_valid_from, tp_valid_to, tp_is_active, tp_repay_period, tp_desc, old_id, tp_alico_percent, tp_bank_percent, tp_bank_coefficient, tp_use_deduct_amount, tp_deduction_amount, tp_alico_renew_percent, tp_bank_renew_percent, tp_maturity_date_age, tp_duration_range, tp_minage, tp_maxage, fixed_amount, fixed_premium)
+VALUES(0, 0, '', '', '', '', 0, 0, '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0);
+INSERT INTO public.crl_tp_coef
+(id, tp_id, ip_id, coef_value, fixed_value, fixed_value_coef)
+VALUES(0, 0, 0, 0, 0, 0);
+INSERT INTO public.crm_claim_nigo
+(id, claimno, nigo, redflag)
+VALUES(0, '', 0, 0);
+INSERT INTO public.crsfccc
+(ccccatg, ccccode, cccdesc)
+VALUES('', '', '');
+INSERT INTO public.crsfclm
+(clmno, crfid, clmon, stat, statdte, chck, faok, paok, categ, death, cause, "event", iname, ibthd, iidno, iadr1, iadr2, izip, icity, evtdt, ntfdt, entdt, covamt, resamt, bftamt, bfttot, dclobj, dclp2s, hcllsqn, setlsqn, flwlsqn, fmelsqn, flelsqn, setpaid, setpdte, fmeamt, fleamt, recusr, recdte)
+VALUES('', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, '', 0, '', '', '', '', '', '', '', 0, 0, '', '');
+INSERT INTO public.crsfclmhi
+(clmno, seqno, rstc, rstcdt, "action", actdte, actdsc, recusr, recdte)
+VALUES('', '', '', '', '', '', '', '', '');
+INSERT INTO public.crsfcrp
+(polno, plob, effdte, matdte, oname, adrs1, adrs2, zip, city, recusr, recdte)
+VALUES('', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public.crsfcrr
+(polno, rdrno, plcd, plob, effdte, matdte, annprm, modprm, covamt, recusr, recdte)
+VALUES('', '', '', '', '', '', 0, 0, 0, '', '');
+INSERT INTO public.crsfdcl
+(dclobj, dclpw2, dcldesc, dclpops)
+VALUES('', 0, '', '');
+INSERT INTO public.crsfpcd
+(pcdplan, pcdfaok, pcdplob, pcdname, pcdhsc, pcdidx, pcdrein, pcdibnrsc, pcdibnrcc, pcdibnrpc, pcdibnrar, pcdrbas, pcdrdet, pcdrspe, pcdincrcr, pcdincrdr, pcddecrcr, pcddecrdr, pcdbnftcr, pcdbnftdr)
+VALUES('', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO public.crsfpol
+(clmno, polno, crfid, clmon, stat, statdte, faok, raok, bnkasgn, iname, ibthd, iidno, oname, obthd, cpyfr, "type", plob, issdte, effdte, paydte, castat, bilmod, modprm, annprm, wcpprm, covamt, resamt, bftamt, bfttot, ccag1fc, eaag1nm, ccag2fc, eaag2nm, dclobj, dclp2s, recusr, recdte)
+VALUES('', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, '', '', '', '', '', 0, '', '');
+INSERT INTO public.crsfrsb
+(rsbclmno, rsbpolno, rsbrtype, rsbridnt, rsbrdupl, rsbstat, rsbstatdte, rsbfaok, rsbexgrac, rsbcbst, rsbplob, rsbplcd, rsbplwc, rsbhscp, rsbhscfr, rsbhscto, rsbhscfr2, rsbhscto2, rsbhscfr3, rsbhscto3, rsbeffdte, rsbmatdte, rsbpyudte, rsbrel, rsbsex, rsbinsname, rsbinsbthd, rsbissage, rsbannprm, rsbmodprm, rsbhscprm, rsbcovamt, rsbrestyp, rsbrespct, rsbresamt, rsbresnew, rsbbftpct, rsbbftamt, rsbbfttot, rsbpsettle, rsbdclobj, rsbdclp2s, rsbhislsqn, rsbrecusr, rsbrecdte)
+VALUES('', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, '', '', 0, '', '', '');
+INSERT INTO public.crsfrsbhi
+(hrsbclmno, hrsbpolno, hrsbsrctp, hrsbsrcid, hrsbrdupl, hrsbseqno, hrsbrplan, hrsbaction, hrsbactdte, hrsbactdsc, hrsbtrstat, hrsbtrstdt, hrsbtrcode, hrsbtrdate, hrsbtracn1, hrsbtracn2, hrsbtramnt, hrsbrecusr, hrsbrecdte)
+VALUES('', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0, '', '');
+INSERT INTO public.crsfset
+(setclmno, setsetno, setpolno, setstate, setcrtdate, setaprdate, setapruser, setpaydate, setrejdate, setsetled, settbpaid, setpintot, setpinpct, setpinlsqn, setsaclsqn, setnotes, setrecusr, setrecdte, setcurrno)
+VALUES('', '', '', '', '', '', '', '', '', 0, 0, 0, 0, '', '', '', '', '', '');
+INSERT INTO public.crsfsrb
+(srbclmno, srbsetno, srbpolno, srbrsbtp, srbrsbid, srbrsbdp, srbbftplc, srbbftdsc, srbbftper, srbbftset, srbbftpay, srbbftsgn, srbbftpgm, srbrecusr, srbrecdte)
+VALUES('', '', '', '', '', '', '', '', 0, 0, 0, '', '', '', '');
+INSERT INTO public.cs_accidents
+(id, id_link, reason_type, reason_info, claim_date, notification_date, add_date, add_ldap_login, export_ldap_login, export_status, export_date, status, death)
+VALUES(0, 0, '', '', '', '', '', '', '', '', '', '', 0);
+INSERT INTO public.cs_d_category
+(id, "name", "program", status)
+VALUES(0, NULL::character varying, 0, 0);
+INSERT INTO public.cs_d_program
+(id, "name", status)
+VALUES(0, NULL::character varying, 0);
+INSERT INTO public.cs_d_subcategory
+(id, "name", category, "comment", status)
+VALUES(0, NULL::character varying, 0, NULL::character varying, 0);
+INSERT INTO public.cs_d_subcategory_item
+(id, "name", subcategory, "percent", status)
+VALUES(0, NULL::character varying, 0, NULL::numeric, 0);
+INSERT INTO public.cs_id_link
+(id, id_system, id_register, g_user_id, g_contract, c_policy_id, c_tp_id, c_taxcode, id_personal, eid, olass_pn, olass_an, claim_clmno, claim_polno)
+VALUES(0, 0, 0, 0, 0, 0, 0, NULL::character varying, 0, 0, NULL::character varying, NULL::character varying, NULL::character varying, NULL::character varying);
+INSERT INTO public.cs_person
+(id, username, "password", email, active, "admin")
+VALUES(0, '', '', '', '', '');
+INSERT INTO public.cs_person_roles
+(id, id_person, roles)
+VALUES(0, 0, '');
+INSERT INTO public.cs_register
+(id, first_name, last_name, informer, contact_phones, contact_email, reason_type, reason_info, death, claim_date, add_date, add_ldap_login, status, data_source, id_system, eid, is_insured, patro_name)
+VALUES(0, '', '', '', '', '', '', '', 0, '', '', '', '', 0, 0, 0, 0, '');
+INSERT INTO public.cs_system
+(id, system_name, system_info, system_code, system_type)
+VALUES(0, '', '', '', '');
