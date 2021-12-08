@@ -9,7 +9,7 @@
             <form name="searchForm" action="/clients/" method="post">
                 <div >
                 <@ui.formInput id="t3" name="taxcode"  label="Taxcode" value="${taxcode}" />
-                <@ui.formInput id="t4" name="searchName"  label="Customer Name" value="${searchName}" />
+<#--                <@ui.formInput id="t4" name="searchName"  label="Customer Name" value="${searchName}" />-->
                 </div>
                 <input type="hidden" name="_csrf" value="${_csrf.token}"/>
                 <input type="submit" class="btn btn-primary" value="Do search..."/>

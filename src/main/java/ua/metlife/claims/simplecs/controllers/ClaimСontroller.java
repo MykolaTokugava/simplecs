@@ -182,12 +182,16 @@ public class ClaimСontroller {
             list = crlPaymentRepository.findByGNameTaxcode(searchName, taxcode);
         } else {
             //list = crlPaymentRepository.findTop20ByOrderByIdDesc();
-            list = crlPaymentRepository.findTop20WithStatusClaim();
+            //list = crlPaymentRepository.findTop20WithStatusClaim();
         }
 
         List<CrlPayment> listResult = new ArrayList<>();
 
         list.stream().limit(20).forEach(x->listResult.add(x));
+
+        for (CrlPayment item: listResult) {
+            item.getGeneralId().setClaim(item.getGeneralId().getClaim()==null ? 0 : item.getGeneralId().getClaim());
+        }
 
         log.info("listResult.size(): " + listResult.size());
 
