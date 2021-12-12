@@ -20,32 +20,72 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9194258a-5207-4f64-ac34-1b465a3a883c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/test/BulkCopyCSV.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/client/clientinfo.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/common-mini.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/controllers/ClaimСontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/controllers/ClaimСontroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/controllers/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/CrlBank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/CrlBank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/CrlTariffPlan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/CrlTariffPlan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/entity/crl/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/repo/CrlPaymentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/repo/CrlPaymentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/service/PersonSevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/service/PersonSevice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/clients.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/clients.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/clientview.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/clientview.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/lang/actionForm.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/client/actionForm.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/lang/langList.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/client/clientsList.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/login.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/simplecs-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/simplecs-1.0-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/App.java" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1989144461">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="iml" value="1" />
+          <entry key="java" value="1" />
+          <entry key="txt" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="IDEA_MODULE" value="1" />
+          <entry key="JAVA" value="1" />
+          <entry key="PLAIN_TEXT" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="15" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="15" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/srt.txt.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/simplecs.iml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/App.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -63,9 +103,106 @@
       </map>
     </option>
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/App.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1216" />
+  </component>
   <component name="ProjectId" id="20VLkVktq5XLP23ucYg4CBNHyGt" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="metCs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="metCs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="metCs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="metCs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="metCs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="metCs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="metCs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="metCs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="metCs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="metCs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="simplecs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="metCs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="metCs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="metCs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="metCs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="metCs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="metCs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="metCs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="metCs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -112,6 +249,18 @@
       <recent name="E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\ClaimsEntity" />
       <recent name="E:\Met\_R\simplecs\src\main\java\ua\metlife\claims\simplecs\processing" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -170,7 +319,6 @@
       </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -183,8 +331,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="TestNG">
-      <option name="TEST_OBJECT" value="CLASS" />
+    <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <properties />
       <listeners />
@@ -193,10 +340,10 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Spring Boot.App" />
       <item itemvalue="Application.App" />
       <item itemvalue="Application.Test" />
       <item itemvalue="JUnit.ClaimСontrollerTest.getList" />
-      <item itemvalue="Spring Boot.App" />
     </list>
     <recent_temporary>
       <list>
@@ -259,11 +406,51 @@
       <workItem from="1636711764730" duration="4734000" />
       <workItem from="1637044640991" duration="15873000" />
       <workItem from="1637133278512" duration="11691000" />
+      <workItem from="1639322014005" duration="70000" />
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="70000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1216" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Designer" />
+      <window_info id="Image Layers" />
+      <window_info id="UI Designer" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Capture Tool" />
+      <window_info id="Web" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Spring" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -280,12 +467,21 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="234" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1636723458148">
@@ -332,6 +528,7 @@
           <url>file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/utils/ClaimSystemLink.java</url>
           <line>101</line>
           <log-expression expression="        try {&#10;            csObject.setCsPolNo(nextPolNoForGmdClaims());&#10;            PreparedStatement stmt = GlobalConnection.getSqlConnection().prepareStatement(sql);&#10;            stmt.setString(1, csObject.getCsPolNo());&#10;            stmt.setString(2, Convert.checkString(csObject.getcObject().getCompanyShortNameLocal().trim().length() == 0 ? csObject.getcObject().getCompanyNameUa() : csObject.getcObject().getCompanyShortNameLocal(), 30));&#10;            stmt.setString(3, Convert.checkString(csObject.getInsObject().getDob(), 8));&#10;            stmt.setString(4, Convert.checkString(csObject.getCnObject().getIssueDate(), 8));&#10;            stmt.setString(5, Convert.checkString(csObject.getCnObject().getMaturityDate(), 8));&#10;            stmt.setString(6, Convert.checkString(csObject.getDeathStatus().equals(&quot;death&quot;) ? &quot;10&quot; : &quot;20&quot;, 2));&#10;            stmt.setString(7, &quot;&quot;);&#10;            stmt.setBigDecimal(8, new BigDecimal(&quot;0.00&quot;));&#10;            stmt.setBigDecimal(9, new BigDecimal(&quot;0.00&quot;));&#10;            stmt.setBigDecimal(10, new BigDecimal(&quot;0.00&quot;));&#10;            stmt.setString(11, &quot;&quot;);&#10;            stmt.setString(12, &quot;&quot;);&#10;            stmt.setString(13, &quot;&quot;);&#10;            stmt.setString(14, &quot;&quot;);&#10;            stmt.setString(15, GlobalConnection.getOlassLogin().toUpperCase());&#10;            stmt.setString(16, DateTools.getDateNowYmd());&#10;&#10;            stmt.executeUpdate();&#10;            stmt.close();&#10;            return true;&#10;        } catch (SQLException ex) {&#10;            System.err.println(&quot;SQLException: &quot; + ex.getMessage());&#10;            System.err.println(&quot;SQL list&gt;: &quot; + sql);&#10;        }&#10;        return false;&#10;    }   " language="JAVA" />
+          <properties />
         </line-breakpoint>
         <line-breakpoint type="java-method">
           <url>jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.28/tomcat-embed-core-8.5.28.jar!/org/apache/catalina/core/ApplicationFilterChain.class</url>
@@ -387,6 +584,21 @@
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/simplecs.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srt.txt.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/metlife/claims/simplecs/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
