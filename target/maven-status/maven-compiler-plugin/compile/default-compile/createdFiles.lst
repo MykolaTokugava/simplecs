@@ -12,6 +12,7 @@ ua\metlife\claims\simplecs\entity\crs\CrsFclmHiPk.class
 ua\metlife\claims\simplecs\ClaimsEntity\ClaimCollector.class
 ua\metlife\claims\simplecs\ClaimsEntity\CreditLifeObject.class
 ua\metlife\claims\simplecs\utils\DbEnvData.class
+ua\metlife\claims\simplecs\test\BulkCopyCSV.class
 ua\metlife\claims\simplecs\controllers\ClaimСontroller.class
 ua\metlife\claims\simplecs\controllers\MainController.class
 ua\metlife\claims\simplecs\utils\ClaimsUtils.class

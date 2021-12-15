@@ -7,7 +7,6 @@ import lombok.ToString;
 import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "languages")
@@ -22,12 +21,10 @@ public class Languages {
     @Column (name="id")
     private Long id;
 
-    @NotBlank(message = "Language name cannot be empty")
     @Length(max = 100, message = "Name too long (more than 100)")
     @Column (name="name")
     private String name;
 
-    @NotBlank(message = "Language code cannot be empty")
     @Length(max = 30, message = "Code too long (more than 30)")
     @Column (name="code")
     private String code;
