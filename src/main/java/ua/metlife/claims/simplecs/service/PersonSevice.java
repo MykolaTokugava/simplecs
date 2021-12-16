@@ -56,18 +56,13 @@ public class PersonSevice implements UserDetailsService {
 
         boolean isEmailChanged = (email != null && !email.equals(userEmail)) ||
                 (userEmail != null && !userEmail.equals(email));
-
         if (isEmailChanged) {
             user.setEmail(email);
         }
-
         if (!StringUtils.isEmpty(password)) {
             user.setPassword(passwordEncoder.encode(user.getPassword()));
         }
-
         personRepo.save(user);
-
-
     }
 
 

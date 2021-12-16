@@ -1,4 +1,4 @@
--- claims.crsfclm definition
+crl_general_1c-- claims.crsfclm definition
 
 CREATE TABLE `crsfclm` (
   `CLMNO` char(10) NOT NULL,

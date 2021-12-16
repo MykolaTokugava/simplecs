@@ -63,7 +63,6 @@ public class CrlClaimOpen {
         ClaimIntegrator claimIntegrator = new ClaimIntegrator();
         claimIntegrator.setEntityManager(entityManager);
         Connection conn = ConnectionFromJpa.getConnection(claimIntegrator.getEntityManager());
-        log.info("ZOPA1");
         String clmNumber = ClaimSystemLink.nextClaimNumberForClaim(conn, null);
         log.info("clmNumber CRSFCLM: " + clmNumber);
         String polNumber = ClaimSystemLink.nextClaimNumberForCrl(conn, null);

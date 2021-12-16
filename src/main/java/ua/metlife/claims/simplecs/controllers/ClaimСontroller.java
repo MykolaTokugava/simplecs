@@ -13,6 +13,7 @@ import ua.metlife.claims.simplecs.entity.crl.CrlGeneralBank;
 import ua.metlife.claims.simplecs.entity.crl.CrlPayment;
 import ua.metlife.claims.simplecs.entity.crl.Languages;
 import ua.metlife.claims.simplecs.processing.Convert;
+import ua.metlife.claims.simplecs.repo.CrlGeneral1cRepository;
 import ua.metlife.claims.simplecs.repo.CrlPaymentRepository;
 import ua.metlife.claims.simplecs.utils.DbEnvData;
 
@@ -38,6 +39,9 @@ public class ClaimСontroller {
 
     @Autowired
     private HttpServletRequest request;
+
+    @Autowired
+    private CrlGeneral1cRepository crlGeneral1cRepository;
 
     @GetMapping
     public String getList(Model model) {
@@ -174,8 +178,11 @@ public class ClaimСontroller {
         taxcode = taxcode.trim();
         searchName = searchName.toLowerCase().trim();
         List<CrlPayment> list = new ArrayList<>();
+        List<CrlGeneral1c> list1c =  new ArrayList<>();
         if (taxcode.length()>4 && searchName.length()==0) {
             list = crlPaymentRepository.findByTaxcode(taxcode);
+            list1c = crlGeneral1cRepository.findByTaxcode(taxcode);
+            log.info("list1c: " + list1c.size());
         } else if (taxcode.length()==0 && searchName.length()>5) {
             list = crlPaymentRepository.findByGName(searchName);
         } else if (taxcode.length()>4 && searchName.length()>5) {
