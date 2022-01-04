@@ -246,7 +246,7 @@ public class ClaimСontroller {
         model.addAttribute("paidfrom", getDataNotNull(Convert.stringToDateFormatString(Convert.DATE_FORMAT_BASE, Convert.DATE_FORMAT_UA, crlPayment.getPaidFrom())));
         model.addAttribute("paidto", getDataNotNull(Convert.stringToDateFormatString(Convert.DATE_FORMAT_BASE, Convert.DATE_FORMAT_UA, crlPayment.getPaidTo())));
         model.addAttribute("paiddate", getDataNotNull(Convert.stringToDateFormatString(Convert.DATE_FORMAT_BASE, Convert.DATE_FORMAT_UA, crlPayment.getDate1c())));
-        model.addAttribute("amount", getDataNotNull(crlPayment.getAmount().toString()));
+        model.addAttribute("amount", getDataNotNull((crlPayment.getAmount()==null ? BigDecimal.ZERO : crlPayment.getAmount()).toString()));
         model.addAttribute("premium", getDataNotNull((crlPayment.getPremiumCalculated()!=null ? crlPayment.getPremiumCalculated() : BigDecimal.ZERO).toString()));
         model.addAttribute("titleInfo", "Это мой заголовок");
         model.addAttribute("tplan", getDataNotNull(crlGeneral1c.getCurrentTpId().getTpName()));

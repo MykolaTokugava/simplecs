@@ -79,7 +79,9 @@
                 <tr>
                     <th scope="row">count</th>
                     <th scope="col">Product</th>
-                    <th scope="col">Rate</th>
+                    <th scope="col">Coef</th>
+                    <th scope="col">Fixed Rate</th>
+                    <th scope="col">Fixed value</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -90,7 +92,9 @@
                     <tr>
                         <th scope="row">${count}</th>
                         <td>${tar.ipId.ipCode}</td>
-                        <td>${tar.coefValue}</td>
+                        <td>${tar.coefValue?string["0.######"]}</td>
+                        <td>${tar.fixedValueCoef?string["0.######"]}</td>
+                        <td>${tar.fixedValue?string["0.######"]}</td>
                     </tr>
                 </#list>
                 </#if>
