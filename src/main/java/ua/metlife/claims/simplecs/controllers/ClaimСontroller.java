@@ -236,24 +236,27 @@ public class ClaimСontroller {
         model.addAttribute("isStatus", false);
 
         model.addAttribute("id", crlPayment.getId());
-        model.addAttribute("fullName", crlGeneral1c.getCustomerFullName());
-        model.addAttribute("dob", Convert.stringToDateFormatString(Convert.DATE_FORMAT_BASE, Convert.DATE_FORMAT_UA, crlGeneral1c.getCustomerDateOfBirth()));
-        model.addAttribute("taxcode", crlGeneralBank.getTaxcode()==null ? "" : crlGeneralBank.getTaxcode());
-        model.addAttribute("passport", crlGeneralBank.getInsurantPassport());
-        model.addAttribute("address", address);
+        model.addAttribute("fullName", getDataNotNull(crlGeneral1c.getCustomerFullName()));
+        model.addAttribute("dob", getDataNotNull(Convert.stringToDateFormatString(Convert.DATE_FORMAT_BASE, Convert.DATE_FORMAT_UA, crlGeneral1c.getCustomerDateOfBirth())));
+        model.addAttribute("taxcode", getDataNotNull(crlGeneralBank.getTaxcode()));
+        model.addAttribute("passport", getDataNotNull(crlGeneralBank.getInsurantPassport()));
+        model.addAttribute("address", getDataNotNull(address));
         model.addAttribute("bank", "["+crlGeneral1c.getCurrentTpId().getBpId().getBpBankId().getBankCode() +"] " +crlGeneral1c.getCurrentTpId().getBpId().getBpBankId().getBankName());
-        model.addAttribute("bank_tp", crlGeneral1c.getCurrentTpId().getBpId().getBpName());
-        model.addAttribute("paidfrom", Convert.stringToDateFormatString(Convert.DATE_FORMAT_BASE, Convert.DATE_FORMAT_UA, crlPayment.getPaidFrom()));
-        model.addAttribute("paidto", Convert.stringToDateFormatString(Convert.DATE_FORMAT_BASE, Convert.DATE_FORMAT_UA, crlPayment.getPaidTo()));
-        model.addAttribute("paiddate", Convert.stringToDateFormatString(Convert.DATE_FORMAT_BASE, Convert.DATE_FORMAT_UA, crlPayment.getDate1c()));
-        model.addAttribute("amount", crlPayment.getAmount());
-        model.addAttribute("premium", crlPayment.getPremiumCalculated()!=null ? crlPayment.getPremiumCalculated() : BigDecimal.ZERO);
+        model.addAttribute("bank_tp", getDataNotNull(crlGeneral1c.getCurrentTpId().getBpId().getBpName()));
+        model.addAttribute("paidfrom", getDataNotNull(Convert.stringToDateFormatString(Convert.DATE_FORMAT_BASE, Convert.DATE_FORMAT_UA, crlPayment.getPaidFrom())));
+        model.addAttribute("paidto", getDataNotNull(Convert.stringToDateFormatString(Convert.DATE_FORMAT_BASE, Convert.DATE_FORMAT_UA, crlPayment.getPaidTo())));
+        model.addAttribute("paiddate", getDataNotNull(Convert.stringToDateFormatString(Convert.DATE_FORMAT_BASE, Convert.DATE_FORMAT_UA, crlPayment.getDate1c())));
+        model.addAttribute("amount", getDataNotNull(crlPayment.getAmount().toString()));
+        model.addAttribute("premium", getDataNotNull((crlPayment.getPremiumCalculated()!=null ? crlPayment.getPremiumCalculated() : BigDecimal.ZERO).toString()));
         model.addAttribute("titleInfo", "Это мой заголовок");
-        model.addAttribute("tplan", crlGeneral1c.getCurrentTpId().getTpName());
-        model.addAttribute("tpCode", crlGeneral1c.getCurrentTpId().getTpCode());
+        model.addAttribute("tplan", getDataNotNull(crlGeneral1c.getCurrentTpId().getTpName()));
+        model.addAttribute("tpCode", getDataNotNull(crlGeneral1c.getCurrentTpId().getTpCode()));
         model.addAttribute("tarrifs", crlGeneral1c.getCurrentTpId().getCrlTpCoefList());
         return "/clientview";
     }
 
+    public String getDataNotNull(String item) {
+        return item==null ? "" : item;
+    }
 
 }

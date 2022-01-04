@@ -1,4 +1,3 @@
-
 <h3>${fullName} - Client detail</h3>
 
 <table width="100%" class="table table-striped">
@@ -74,7 +73,7 @@
             </table>
         </td>
         <td width="40%" valign="top">
-        <b>[${tpCode}] ${tplan}</b>
+            <b>[${tpCode}] ${tplan}</b>
             <table class="table table-striped">
                 <thead class="thead-light">
                 <tr>
@@ -85,6 +84,7 @@
                 </thead>
                 <tbody>
                 <#assign count = 0>
+                <#if tarrifs?has_content>
                 <#list tarrifs as tar>
                     <#assign count = count + 1>
                     <tr>
@@ -93,6 +93,7 @@
                         <td>${tar.coefValue}</td>
                     </tr>
                 </#list>
+                </#if>
                 </tbody>
             </table>
         </td>

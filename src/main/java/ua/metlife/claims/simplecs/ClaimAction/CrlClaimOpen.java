@@ -17,6 +17,7 @@ import ua.metlife.claims.simplecs.repo.CrsfClmRepository;
 import ua.metlife.claims.simplecs.repo.CrsfCrpRepository;
 import ua.metlife.claims.simplecs.repo.CrsfPolRepository;
 import ua.metlife.claims.simplecs.utils.ClaimSystemLink;
+import ua.metlife.claims.simplecs.utils.ClaimsUtils;
 import ua.metlife.claims.simplecs.utils.ConnectionFromJpa;
 
 import javax.persistence.EntityManager;
@@ -155,23 +156,23 @@ public class CrlClaimOpen {
         itemPol.setFaok("N");
         itemPol.setRaok("N");
         itemPol.setBnkasgn("N");
-        itemPol.setIname(crlGeneral1c.getCustomerFullName());
-        itemPol.setIbthd(crlGeneral1c.getCustomerDateOfBirth());
+        itemPol.setIname(ClaimsUtils.getDataNotNull(crlGeneral1c.getCustomerFullName()));
+        itemPol.setIbthd(crlGeneral1c.getCustomerDateOfBirth()==null ? "" : crlGeneral1c.getCustomerDateOfBirth());
         itemPol.setIidno(crlGeneralBank.getTaxcode()==null ? "" : crlGeneralBank.getTaxcode());//crlGeneralBank.getInsurantPassport()==null ? "" : crlGeneralBank.getInsurantPassport()
-        itemPol.setOname(crlGeneral1c.getCustomerFullName());
-        itemPol.setObthd(crlGeneral1c.getCustomerDateOfBirth());
+        itemPol.setOname(ClaimsUtils.getDataNotNull(crlGeneral1c.getCustomerFullName()));
+        itemPol.setObthd(crlGeneral1c.getCustomerDateOfBirth()==null ? "" : crlGeneral1c.getCustomerDateOfBirth());
         itemPol.setCpyfr("O");
         itemPol.setType("I");
         itemPol.setPlob("10");
-        itemPol.setIssdte(crlPayment.getPaidFrom());
-        itemPol.setEffdte(crlPayment.getPaidTo());
-        itemPol.setPaydte(crlPayment.getDate1c());
+        itemPol.setIssdte(ClaimsUtils.getDataNotNull(crlPayment.getPaidFrom()));
+        itemPol.setEffdte(ClaimsUtils.getDataNotNull(crlPayment.getPaidTo()));
+        itemPol.setPaydte(ClaimsUtils.getDataNotNull(crlPayment.getDate1c()));
         itemPol.setCastat("");//crlGeneral1c.getStatus()
         itemPol.setBilmod("00");//crlGeneral1c.getModality()
         itemPol.setModprm(new BigDecimal("0.00"));
         itemPol.setAnnprm(new BigDecimal("0.00"));
         itemPol.setWcpprm(new BigDecimal("0.00"));
-        itemPol.setCovamt(crlPayment.getAmount());
+        itemPol.setCovamt(crlPayment.getAmount()==null ? BigDecimal.ZERO : crlPayment.getAmount() );
         itemPol.setResamt(BigDecimal.ZERO);//crlPayment.getPremiumCalculated()
         itemPol.setBftamt(new BigDecimal("0.00"));
         itemPol.setBfttot(new BigDecimal("0.00"));
@@ -234,8 +235,8 @@ public class CrlClaimOpen {
         crsfClm.setDeath(claimDeathStatus);
         crsfClm.setCause("");
         crsfClm.setEvent("");
-        crsfClm.setIname(crlGeneral1c.getCustomerFullName());
-        crsfClm.setIbthd(crlGeneral1c.getCustomerDateOfBirth());
+        crsfClm.setIname(ClaimsUtils.getDataNotNull(crlGeneral1c.getCustomerFullName()));
+        crsfClm.setIbthd(ClaimsUtils.getDataNotNull(crlGeneral1c.getCustomerDateOfBirth()));
         crsfClm.setIidno(crlGeneralBank.getTaxcode()==null ? "" : crlGeneralBank.getTaxcode());
         crsfClm.setIadr1(address);
         crsfClm.setIadr2("");

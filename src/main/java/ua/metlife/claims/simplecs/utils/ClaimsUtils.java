@@ -212,8 +212,10 @@ log.info("counter = " + counter);
 
     }
 
-    
-   
+
+    public static String getDataNotNull(String item) {
+        return item==null ? "" : item;
+    }
 
 
 }

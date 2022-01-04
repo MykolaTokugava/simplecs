@@ -20,7 +20,11 @@
         <td><a href="javascript:void(0)" onClick="javascript:window.open('/clients/clientview/${client.id}', 'okno', 'width=1200,height=1000, left=350, top=100, modal=true, status=no,toolbar=no, menubar=no,scrollbars=yes,resizable=yes');">${client.generalId.customerFullName}</a></td>
         <td>${client.generalId.taxcode}</td>
         <td>${client.getFormatedData(client.paidFrom)}-${client.getFormatedData(client.paidTo)}</td>
-        <td>${client.generalId.currentTpId.tpCode}</td>
+        <td>
+            <#if client.generalId.currentTpId.tpCode?has_content>
+                ${client.generalId.currentTpId.tpCode}
+            </#if>
+        </td>
         <td>${client.generalId.claim}</td>
         <td><a class="btn btn-info" href="/clients/addclaim/${client.id}"/>Add Claim</a>&nbsp;<a class="btn btn-info" href="/clients/openclaim/${client.id}"/>Open Claim</a>&nbsp;<a class="btn btn-info" href="/clients/declineclaim/${client.id}"/>Decline</a></td>
     </tr>
