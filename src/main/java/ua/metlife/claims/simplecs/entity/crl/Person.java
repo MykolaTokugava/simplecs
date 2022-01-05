@@ -40,8 +40,7 @@ public class Person implements UserDetails {
     private String username;
 
     private String password;
-    private boolean active;
-
+    private String active;
     private String email;
 
     public boolean isAdmin() {
@@ -64,11 +63,11 @@ public class Person implements UserDetails {
         this.password = password;
     }
 
-    public boolean isActive() {
+    public String isActive() {
         return active;
     }
 
-    public void setActive(boolean active) {
+    public void setActive(String active) {
         this.active = active;
     }
 
@@ -108,7 +107,7 @@ public class Person implements UserDetails {
 
     @Override
     public boolean isEnabled() {
-        return  isActive();
+        return  isActive().equals("true") == true ? true : false;
     }
 
     @Override

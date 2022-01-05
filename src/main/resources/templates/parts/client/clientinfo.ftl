@@ -87,16 +87,34 @@
                 <tbody>
                 <#assign count = 0>
                 <#if tarrifs?has_content>
-                <#list tarrifs as tar>
-                    <#assign count = count + 1>
+                    <#list tarrifs as tar>
+                        <#assign count = count + 1>
                     <tr>
                         <th scope="row">${count}</th>
                         <td>${tar.ipId.ipCode}</td>
-                        <td>${tar.coefValue?string["0.######"]}</td>
-                        <td>${tar.fixedValueCoef?string["0.######"]}</td>
-                        <td>${tar.fixedValue?string["0.######"]}</td>
+                        <td>
+                        <#if tar.coefValue ??>
+                            ${tar.coefValue?string["0.######"]}
+                        <#else>
+                            0.0
+                        </#if>
+                        </td>
+                        <td>
+                        <#if tar.fixedValueCoef ??>
+                            ${tar.fixedValueCoef?string["0.######"]}
+                        <#else>
+                        0.0
+                        </#if>
+                        </td>
+                        <td>
+                        <#if tar.fixedValue ??>
+                            ${tar.fixedValue?string["0.######"]}
+                        <#else>
+                        0.0
+                        </#if>
+                        </td>
                     </tr>
-                </#list>
+                    </#list>
                 </#if>
                 </tbody>
             </table>
